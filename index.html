@@ -10,16 +10,15 @@
 <body>
     <header>
         <div class="left">
-            <h1>
-                Escape <br> in 60 mins?
-            </h1>
+            <h1>Escape</h1>
+            <h1>in 60 mins?</h1>
             <a href="#rooms">VIEW OUR ROOMS</a>
         </div>
         <div class="right">
-                <span><br></span>
-                <span><br></span>
-                <span><br></span>
-                <span><br></span>
+                <span>&#8213;</span>
+                <span>&#8213;</span>
+                <span>&#8213;</span>
+                <span>&#8213;</span>
         </div>
     </header>
     <main>
@@ -29,12 +28,16 @@
             </h2>
             <div class="card__wrapper">
                 <div class="card__one">
-                    <div class="card__photo">
+                    <div class="card__photo reverse">
                         <img src="resources/images/gallery/slide-2.jpg" alt="Image of the first room" class="card__photo__one">
                     </div>
-                    <div class="card__content">
+                    <div class="card__content reversed">
                         <div class="card__level">
-                            cadenas
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--grey">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--grey">
                         </div>
                         <div class="card__title">
                             <h3>Magic Imporium</h3>
@@ -64,7 +67,11 @@
                     </div>
                     <div class="card__content">
                         <div class="card__level">
-                            <p>cadebas</p>
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--grey">
                         </div>
                         <div class="card__title">
                             <h3>The Cure</h3>
@@ -89,12 +96,16 @@
                     </div>
                 </div>
                 <div class="card__three">
-                    <div class="card__photo">
+                    <div class="card__photo reverse">
                         <img src="resources/images/gallery/room-3.jpg" alt="Image of the third room" class="card__photo__three">
                     </div>
-                    <div class="card__content">
+                    <div class="card__content reversed">
                         <div class="card__level">
-
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--red">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--grey">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--grey">
+                            <img src="./resources/images/logo/lock-solid.svg" alt="" class="lock__img--grey">
                         </div>
                         <div class="card__title">
                             <h3>Burlesque</h3>
@@ -129,21 +140,24 @@
             <h2>How it works</h2>
             <div class="works__wrapper">
                 <div class="works__content">
-                    <h4>You Are Locked In</h4>
+                    <img src="./resources/images/logo/lock.svg" alt="">
+                    <h3>You Are Locked In</h3>
                     <p>You will bring nothing in, but the escape room will be filled with useful and sometimes irrelevant objects</p>
                 </div>
                 <div class="works__content">
-                    <h4>The Clock Is Ticking...</h4>
+                    <img src="./resources/images/logo/clock.svg" alt="">
+                    <h3>The Clock Is Ticking...</h3>
                     <p>Can you puzzle your way to the intriguing conclusion and escape the room in 60 minutes?</p>
                 </div>
                 <div class="works__content">
-                    <h4>Fell The Atmosphere</h4>
+                    <img src="./resources/images/logo/heart-rate.svg" alt="">
+                    <h3>Fell The Atmosphere</h3>
                     <p>The rooms are built to create an authentic experience with a fun atmosphere, strict attention to detail.</p>
                 </div>
             </div>
         </section>
         <section class="testimonials">
-            <h4>Testimonials</h4>
+            <h2>Testimonials</h2>
             <div class="testimonials__wrapper">
                 <div class="testimonials__content">
                     <p class="quote">
@@ -162,7 +176,7 @@
             </div>
         </section>
         <section class="blog">
-            <h4>Latest Blog Posts</h4>
+            <h2>Latest Blog Posts</h2>
             <a href="#">Browse All Blog Posts</a>
             <div class="blog__wrapper">
                 <div class="blog__card">
@@ -207,7 +221,7 @@
             </ul>
         </section>
         <section class="photos">
-            <h4>Photo Shots</h4>
+            <h2>Photo Shots</h2>
             <a href="#">#escapium</a>
             <div class="photos__wrapper">
                 <img src="resources/images/gallery/gallery-1.jpg" alt="">
@@ -225,11 +239,9 @@
         </section>
         <section class="contact">
 
-            <div class="gmap">
-a
-            </div>
+            <div id="map"></div>
             <div class="form">
-                <h4>Get In Touch</h4>
+                <h2>Get In Touch</h2>
                 <form action="">
                     <div class="form__name">
                         <input type="text" name="name" id="name" placeholder="Your name...">
@@ -247,10 +259,13 @@ a
             </div>
         </section>
         <section class="book">
-            <h4>Ready For The Escape?</h4>
+            <h2>Ready For The Escape?</h2>
             <p>Escape Room gives you the opportunity to have fun.</p>
             <a href="#">Book Your Escape</a>
         </section>
     </main>
+    <script src="./resources/js/index.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG3b2FnuaOXt08QB5dn50CitDNCjc9-D8&callback=myMap"></script>
+
 </body>
 </html>
