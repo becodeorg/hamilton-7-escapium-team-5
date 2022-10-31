@@ -14,10 +14,13 @@ footer {
 
 .background {
   width: 100%;
-  backdrop-filter: brightness(0.1);
+  -webkit-backdrop-filter: brightness(0.1);
+          backdrop-filter: brightness(0.1);
 }
 
 .section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 10px;
 }
@@ -131,6 +134,4 @@ a {
   .end {
     justify-content: space-around;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=footer.css.map */
