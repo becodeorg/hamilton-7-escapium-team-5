@@ -1,0 +1,446 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  background-image: url(../images/gallery/slide-1.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  padding-top: 250px;
+}
+header h1 {
+  color: white;
+  font-size: 98px;
+  padding-left: 150px;
+  padding-bottom: 25px;
+  line-height: 1;
+}
+header a {
+  color: lightgrey;
+  text-decoration: none;
+  position: relative;
+  padding-left: 285px;
+}
+header a:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: lightgrey;
+  position: absolute;
+  left: 150px;
+  top: 40%;
+}
+header .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+}
+header .right span {
+  position: relative;
+}
+header .right span:before {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 3px;
+  background: white;
+  position: absolute;
+  right: 15px;
+  bottom: 200px;
+  cursor: pointer;
+}
+
+.rooms {
+  background-color: #1B1B1B;
+  color: white;
+}
+.rooms h2 {
+  padding-top: 50px;
+  text-align: center;
+}
+.rooms__btn {
+  padding: 25px 0 50px 0;
+  text-align: center;
+}
+.rooms a {
+  text-decoration: none;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: 1.5px solid lightgrey;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+.card__one, .card__two, .card__three {
+  max-width: 1000px;
+  display: flex;
+}
+.card__photo {
+  transform: translate(60px);
+}
+.card__photo img {
+  width: 600px;
+  height: 400px;
+  transform: scale(0.8);
+}
+.card__content {
+  background-color: #242424;
+  padding: 30px;
+  box-shadow: -2px 3px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.card__title {
+  font-size: 24px;
+  padding: 10px 0;
+}
+.card__infos {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+.card__text {
+  padding: 10px 0;
+}
+.card__btn {
+  padding: 20px 0;
+}
+.card__btn a {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.works {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+}
+.works h2 {
+  padding-top: 50px;
+}
+.works__wrapper {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.works__content {
+  text-align: center;
+  max-width: 300px;
+  height: 450px;
+  padding: 30px;
+}
+.works__content h4 {
+  padding: 20px 0;
+}
+.works__content p {
+  color: rgb(180, 180, 180);
+}
+
+.testimonials h4 {
+  font-size: 42px;
+  text-align: center;
+  padding: 50px;
+}
+.testimonials__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+.testimonials__content {
+  max-width: 30%;
+}
+.testimonials .quote {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.testimonials img {
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+.testimonials .name {
+  text-align: center;
+  padding-bottom: 250px;
+}
+
+.blog {
+  text-align: center;
+  background-color: #1B1B1B;
+  color: white;
+  position: relative;
+}
+.blog h4 {
+  font-size: 42px;
+  padding: 25px;
+}
+.blog a {
+  color: red;
+}
+.blog__wrapper {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.blog__card {
+  width: 300px;
+  text-align: left;
+}
+.blog__img {
+  position: relative;
+  display: flex;
+}
+.blog__img img:not(.avatar) {
+  width: 300px;
+  height: 200px;
+}
+.blog__img .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+  border: 1px solid white;
+}
+.blog__img .name {
+  position: absolute;
+  bottom: 15px;
+  left: 45px;
+}
+.blog__description {
+  padding-top: 15px;
+  font-size: 12px;
+  color: lightgrey;
+}
+.blog h5 {
+  font-size: 24px;
+  padding-left: 15px;
+}
+.blog__text {
+  padding-left: 15px;
+  padding-bottom: 80px;
+  font-size: 14px;
+  color: lightgray;
+}
+
+.who {
+  background-color: #222222;
+  height: 600px;
+}
+.who__description {
+  font-size: 24px;
+  color: lightgrey;
+  position: relative;
+  left: -700px;
+  top: -700px;
+  transform: rotate(-90deg);
+}
+.who__description::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  background-color: lightgrey;
+  top: 70%;
+  left: -155px;
+}
+.who ul {
+  margin-left: 300px;
+  margin-top: 50px;
+}
+.who ul li {
+  color: white;
+  list-style: none;
+  padding: 35px 0;
+}
+
+.photos {
+  text-align: center;
+  background-color: #1B1B1B;
+  color: white;
+}
+.photos h4 {
+  font-size: 48px;
+  padding: 50px 0 25px;
+}
+.photos a {
+  color: red;
+}
+.photos__wrapper {
+  padding: 80px 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 320px);
+  grid-template-rows: repeat(2, 320px);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+}
+.photos__btn {
+  padding-bottom: 50px;
+}
+.photos__btn a {
+  text-decoration: none;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: 1.5px solid lightgrey;
+}
+
+.contact {
+  display: flex;
+}
+.contact .gmap {
+  width: 50%;
+  height: auto;
+  background-color: cadetblue;
+}
+
+.form {
+  width: 50%;
+  padding: 50px;
+  background-color: #222222;
+}
+.form h4 {
+  font-size: 42px;
+  color: white;
+}
+.form__name, .form__email, .form__message {
+  padding: 10px 0;
+}
+.form input {
+  background-color: #222222;
+}
+.form input:not([type=button]) {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  width: 75%;
+  padding: 15px 0;
+}
+.form #message {
+  padding-bottom: 150px;
+}
+.form input[type=button] {
+  border: 1px solid lightgrey;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 45px;
+  cursor: pointer;
+}
+.form__btn {
+  padding: 50px 0 25px 0;
+}
+
+.book {
+  text-align: center;
+  padding: 50px;
+}
+.book h4 {
+  font-size: 42px;
+  padding: 10px;
+}
+.book p {
+  padding-bottom: 50px;
+}
+.book a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
+  border: none;
+  background-color: red;
+  padding: 20px 35px;
+  border-radius: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
