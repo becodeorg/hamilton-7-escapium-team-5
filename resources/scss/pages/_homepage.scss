@@ -17,6 +17,25 @@ body::-webkit-scrollbar {
     }
 }
 
+.transitionIn {
+    animation: transitionIn 0.7s ease-in-out;
+}
+
+.transitionInDelay {
+    animation: transitionIn 1s ease-in-out;
+}
+
+@keyframes switchCarousel {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }   
+}
+.switchCarousel {
+    animation: switchCarousel 0.4s ease-in;
+}
+
 h1,
 h2,
 h3,
@@ -29,9 +48,14 @@ h6 {
 p,
 a {
     font-family: v.$font_paragraphs;
+    text-decoration: none;
 }
 
 header {
+    background-color: #1B1B1B;
+}
+
+.carousel {
     background-image: 
     linear-gradient((0deg, rgba(27,27,27,10) 0%, rgba(0,0,0,0) 100%)),
     url(../images/gallery/slide-1.jpg);
@@ -40,19 +64,16 @@ header {
     justify-content: space-between;
     padding: 300px 0;
 
-
     h1 {
         color: white;
         font-size: 120px;
         padding-left: 150px;
         padding-bottom: 25px;
         line-height: 1;
-        animation: transitionIn 1s;
     }
 
     a {
         color: lightgrey;
-        text-decoration: none;
         position: relative;
         padding-left: 285px;
         font-size: 14px;
@@ -125,7 +146,6 @@ header {
         text-align: center;
     }
     a {
-        text-decoration: none;
         color: white;
         font-size: 18px;
         border-radius: 35px;
@@ -220,7 +240,6 @@ header {
         padding: 20px 0;
         
         a {
-            text-decoration: none;
             color: white;
             background-color: #F60B0E;
             border: none;
@@ -372,6 +391,7 @@ header {
     &__wrapper {
         padding-top: 100px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
     }
@@ -524,14 +544,15 @@ header {
         grid-template-columns: repeat(4, 320px);
         grid-template-rows: repeat(2, 320px);
         grid-column-gap: 5px;
-        grid-row-gap: 5px;        
+        grid-row-gap: 5px;
     }
+
+
 
     &__btn {
         padding-bottom: 150px;
         text-align: center;
         a {
-            text-decoration: none;
             color: white;
             font-size: 18px;
             border-radius: 35px;
@@ -544,6 +565,8 @@ header {
             }
         }
     }
+
+
 
 }
 
@@ -648,7 +671,6 @@ header {
     }
     
     a {
-        text-decoration: none;
         font-weight: 900;
         font-size: 18px;
         color: white;
@@ -656,5 +678,24 @@ header {
         background-color: #F60B0E;
         padding: 20px 35px;
         border-radius: 30px;
+
+        &:hover {
+            opacity: 0.7;
+            transition: ease-in .3s;
+        }
+    }
+}
+
+@media (max-width: 1340px) {
+    .photos__wrapper {
+        grid-template-columns: repeat(3, 320px);
+        grid-template-rows: repeat(3, 320px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .photos__wrapper {
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: repeat(4, 320px);
     }
 }

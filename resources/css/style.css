@@ -90,6 +90,26 @@ body::-webkit-scrollbar {
     transform: translateY(0);
   }
 }
+.transitionIn {
+  animation: transitionIn 0.7s ease-in-out;
+}
+
+.transitionInDelay {
+  animation: transitionIn 1s ease-in-out;
+}
+
+@keyframes switchCarousel {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.switchCarousel {
+  animation: switchCarousel 0.4s ease-in;
+}
+
 h1,
 h2,
 h3,
@@ -102,37 +122,40 @@ h6 {
 p,
 a {
   font-family: "Hind", sans-serif;
+  text-decoration: none;
 }
 
 header {
+  background-color: #1B1B1B;
+}
+
+.carousel {
   background-image: linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%), url(../images/gallery/slide-1.jpg);
   background-size: cover;
   display: flex;
   justify-content: space-between;
   padding: 300px 0;
 }
-header h1 {
+.carousel h1 {
   color: white;
   font-size: 120px;
   padding-left: 150px;
   padding-bottom: 25px;
   line-height: 1;
-  animation: transitionIn 1s;
 }
-header a {
+.carousel a {
   color: lightgrey;
-  text-decoration: none;
   position: relative;
   padding-left: 285px;
   font-size: 14px;
   letter-spacing: 2px;
   animation: transitionIn 3s;
 }
-header a:hover {
+.carousel a:hover {
   color: #F60B0E;
   transition: ease-in 0.2s;
 }
-header a:before {
+.carousel a:before {
   content: "";
   display: block;
   width: 100px;
@@ -142,20 +165,20 @@ header a:before {
   left: 150px;
   top: 40%;
 }
-header .right {
+.carousel .right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 50px 25px;
 }
-header .right span {
+.carousel .right span {
   position: relative;
   color: lightgray;
   font-size: 24px;
   line-height: 25px;
   cursor: pointer;
 }
-header .right span:hover {
+.carousel .right span:hover {
   color: white;
   transform: scale(1.5);
   transition: ease-in 0.1s;
@@ -185,7 +208,6 @@ header .right span:hover {
   text-align: center;
 }
 .rooms a {
-  text-decoration: none;
   color: white;
   font-size: 18px;
   border-radius: 35px;
@@ -262,7 +284,6 @@ header .right span:hover {
   padding: 20px 0;
 }
 .card__btn a {
-  text-decoration: none;
   color: white;
   background-color: #F60B0E;
   border: none;
@@ -391,6 +412,7 @@ header .right span:hover {
 .blog__wrapper {
   padding-top: 100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
@@ -529,7 +551,6 @@ header .right span:hover {
   text-align: center;
 }
 .photos__btn a {
-  text-decoration: none;
   color: white;
   font-size: 18px;
   border-radius: 35px;
@@ -632,7 +653,6 @@ header .right span:hover {
   color: #717171;
 }
 .book a {
-  text-decoration: none;
   font-weight: 900;
   font-size: 18px;
   color: white;
@@ -640,6 +660,23 @@ header .right span:hover {
   background-color: #F60B0E;
   padding: 20px 35px;
   border-radius: 30px;
+}
+.book a:hover {
+  opacity: 0.7;
+  transition: ease-in 0.3s;
+}
+
+@media (max-width: 1340px) {
+  .photos__wrapper {
+    grid-template-columns: repeat(3, 320px);
+    grid-template-rows: repeat(3, 320px);
+  }
+}
+@media (max-width: 1024px) {
+  .photos__wrapper {
+    grid-template-columns: repeat(2, 320px);
+    grid-template-rows: repeat(4, 320px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
