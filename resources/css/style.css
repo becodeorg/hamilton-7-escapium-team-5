@@ -201,7 +201,8 @@ header {
   height: 2px;
   background-color: #717171;
   top: 50%;
-  left: 49%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .rooms__btn {
   padding: 75px 0 150px 0;
@@ -276,6 +277,10 @@ header {
   padding-bottom: 20px;
   color: #717171;
 }
+.card__infos__people, .card__infos__time, .card__infos__location {
+  display: flex;
+  align-items: center;
+}
 .card__text {
   padding: 10px 0 50px 0;
   color: #717171;
@@ -295,6 +300,18 @@ header {
 .card__btn a:hover {
   opacity: 0.7;
   transition: ease-in 0.2s;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+  filter: invert(100%) sepia(94%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
+}
+.icon__who {
+  width: 50px;
+  height: 50px;
+  filter: invert(49%) sepia(100%) saturate(7292%) hue-rotate(348deg) brightness(89%) contrast(119%);
 }
 
 .reversed {
@@ -318,7 +335,8 @@ header {
   height: 2px;
   background-color: #717171;
   top: 50%;
-  left: 49%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .works__wrapper {
   padding-top: 50px;
@@ -359,7 +377,8 @@ header {
   height: 2px;
   background-color: lightgrey;
   top: 25%;
-  left: 49%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .testimonials__wrapper {
   display: flex;
@@ -381,7 +400,7 @@ header {
 }
 .testimonials .name {
   text-align: center;
-  padding-bottom: 250px;
+  padding-bottom: 75px;
   letter-spacing: 2.5px;
 }
 
@@ -404,7 +423,8 @@ header {
   height: 2px;
   background-color: #717171;
   top: 50%;
-  left: 49%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .blog a {
   color: #F60B0E;
@@ -503,15 +523,18 @@ header {
 }
 .who ul {
   margin-left: 450px;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 .who ul li {
+  display: flex;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: white;
   list-style: none;
   padding: 35px 0;
   font-size: 21px;
+  gap: 50px;
 }
 
 .photos {
@@ -531,7 +554,8 @@ header {
   height: 2px;
   background-color: #717171;
   top: 50%;
-  left: 49%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .photos a {
   color: #F60B0E;
@@ -637,6 +661,7 @@ header {
 .book h2 {
   font-size: 44px;
   padding-top: 50px;
+  padding-bottom: 25px;
   position: relative;
 }
 .book h2::before {
@@ -646,7 +671,8 @@ header {
   height: 3px;
   background-color: #717171;
   top: 0;
-  left: 49%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .book p {
   padding-bottom: 50px;
@@ -671,11 +697,238 @@ header {
     grid-template-columns: repeat(3, 320px);
     grid-template-rows: repeat(3, 320px);
   }
+  .carousel {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1100px) {
+  .card__one, .card__two, .card__three {
+    flex-direction: column;
+    width: 75%;
+  }
+  .card__content {
+    transform: none;
+  }
+  .card__photo img {
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+  .carousel {
+    padding: 200px 0;
+  }
+  .carousel h1 {
+    font-size: 78px;
+  }
+  .who ul {
+    margin-left: 250px;
+  }
+  .who__description {
+    left: 50px;
+  }
 }
 @media (max-width: 1024px) {
   .photos__wrapper {
     grid-template-columns: repeat(2, 320px);
     grid-template-rows: repeat(4, 320px);
+  }
+  .carousel {
+    padding-bottom: 100px;
+  }
+  .carousel h1 {
+    padding-left: 50px;
+  }
+  .carousel a {
+    padding-left: 155px;
+  }
+  .carousel a::before {
+    left: 50px;
+  }
+}
+@media (max-width: 769px) {
+  .who {
+    height: auto;
+  }
+  .who__description {
+    visibility: hidden;
+  }
+  .who ul {
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+  }
+  .carousel {
+    justify-content: center;
+  }
+  .carousel .left {
+    text-align: center;
+  }
+  .carousel .right {
+    display: none;
+  }
+  .rooms h2 {
+    font-size: 32px;
+  }
+  .rooms h3 {
+    font-size: 28px;
+  }
+  .rooms__btn {
+    display: none;
+  }
+  .works h2 {
+    font-size: 32px;
+    padding-top: 75px;
+  }
+  .works h2::before {
+    top: 35%;
+  }
+  .works h3 {
+    font-size: 24px;
+  }
+  .testimonials h2 {
+    padding: 75px;
+  }
+  .testimonials h2::before {
+    top: 20%;
+  }
+  .testimonials__wrapper {
+    gap: 0;
+    justify-content: space-evenly;
+  }
+  .testimonials__content {
+    max-width: 40%;
+  }
+  .blog h2 {
+    font-size: 32px;
+    padding-top: 100px;
+  }
+  .blog h2::before {
+    top: 35%;
+  }
+  .blog__text {
+    padding-bottom: 20px;
+  }
+  .photos h2 {
+    font-size: 32px;
+    padding-top: 75px;
+  }
+  .photos h2::before {
+    top: 35%;
+  }
+  .photos__btn {
+    padding-bottom: 75px;
+  }
+  .photos__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 80px 40px;
+  }
+  .photos__wrapper img {
+    width: 100%;
+  }
+  .book {
+    padding-bottom: 75px;
+  }
+  .book h2 {
+    font-size: 32px;
+    padding-top: 0;
+  }
+  .book h2::before {
+    top: -75%;
+  }
+  .form h2 {
+    padding-top: 0;
+  }
+  .form h2::before {
+    top: -15px;
+  }
+  .last {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 680px) {
+  .contact {
+    flex-direction: column;
+  }
+  #map {
+    width: 100%;
+    height: 600px;
+  }
+  .form {
+    width: 100%;
+  }
+  .form input:not([type=button]) {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .works__wrapper {
+    flex-wrap: wrap;
+  }
+  .works__content {
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .rooms h2 {
+    font-size: 19px;
+  }
+  .works h3 {
+    font-size: 21px;
+  }
+  .works h2 {
+    font-size: 19px;
+  }
+  .works__content p {
+    font-size: 14px;
+  }
+  .carousel a {
+    padding-left: 0;
+  }
+  .carousel a::before {
+    display: none;
+  }
+  .carousel h1 {
+    font-size: 32px;
+    padding: 0 0 10px 0;
+  }
+  .card__wrapper {
+    gap: 50px;
+  }
+  .card__title {
+    font-size: 21px;
+  }
+  .testimonials h2 {
+    font-size: 19px;
+  }
+  .testimonials__content {
+    max-width: 90%;
+  }
+  .testimonials__content--second {
+    display: none;
+  }
+  .blog h2 {
+    font-size: 19px;
+  }
+  .blog h5 {
+    font-size: 21px;
+  }
+  .who li {
+    font-size: 19px;
+  }
+  .photos h2 {
+    font-size: 19px;
+  }
+  .contact h2 {
+    font-size: 19px;
+  }
+  .book h2 {
+    font-size: 19px;
+  }
+  .book p {
+    font-size: 14px;
   }
 }
 

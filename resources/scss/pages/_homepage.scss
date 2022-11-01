@@ -64,6 +64,7 @@ header {
     justify-content: space-between;
     padding: 300px 0;
 
+
     h1 {
         color: white;
         font-size: 120px;
@@ -138,7 +139,8 @@ header {
             height: 2px;
             background-color: #717171;
             top: 50%;
-            left: 49%;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
     &__btn {
@@ -229,6 +231,11 @@ header {
         font-size: 12px;
         padding-bottom: 20px;
         color: #717171;
+
+        &__people, &__time, &__location {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__text {
@@ -255,6 +262,18 @@ header {
         }
     }
 }
+.icon {
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+    filter: invert(100%) sepia(94%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
+
+    &__who {
+        width: 50px;
+        height: 50px;
+        filter: invert(49%) sepia(100%) saturate(7292%) hue-rotate(348deg) brightness(89%) contrast(119%);
+    }
+}
 
 .reversed {
     transform: translate(80px);
@@ -277,7 +296,8 @@ header {
             height: 2px;
             background-color: #717171;
             top: 50%;
-            left: 49%;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
     
@@ -328,7 +348,8 @@ header {
             height: 2px;
             background-color: lightgrey;
             top: 25%;
-            left: 49%;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
 
@@ -356,7 +377,7 @@ header {
 
     .name {
         text-align: center;
-        padding-bottom: 250px;
+        padding-bottom: 75px;
         letter-spacing: 2.5px;
     }
 }
@@ -380,7 +401,8 @@ header {
             height: 2px;
             background-color: #717171;
             top: 50%;
-            left: 49%;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
 
@@ -498,15 +520,18 @@ header {
 
     ul {
         margin-left : 450px;
-        margin-top: 80px;
+        margin-top: 30px;
 
         li {
+            display: flex;
+            align-items: center;
             font-family: v.$font__heading;
             font-weight: 600;
             color: white;
             list-style: none;
             padding: 35px 0;
             font-size: 21px;
+            gap: 50px;
         }
     }
 }
@@ -528,7 +553,8 @@ header {
             height: 2px;
             background-color: #717171;
             top: 50%;
-            left: 49%;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
 
@@ -653,6 +679,7 @@ header {
     h2 {
         font-size: 44px;
         padding-top: 50px;
+        padding-bottom: 25px;
         position: relative;
         &::before {
             position: absolute;
@@ -661,7 +688,8 @@ header {
             height: 3px;
             background-color: #717171;
             top: 0;
-            left: 49%;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
     p {
@@ -691,6 +719,45 @@ header {
         grid-template-columns: repeat(3, 320px);
         grid-template-rows: repeat(3, 320px);
     }
+    .carousel {
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    .card {
+        &__one, &__two, &__three {
+            flex-direction: column;
+            width: 75%;
+        }
+        &__content {
+        transform: none;
+        }
+
+        &__photo img {
+            width: 100%;
+            height: auto;
+            transform: none;
+        }
+    }   
+    .carousel {
+        padding: 200px 0;
+
+        h1 {
+            font-size: 78px;
+            }
+    }
+    .who {
+        ul {
+            margin-left : 250px;
+        }
+
+        &__description {
+            left: 50px;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -698,4 +765,251 @@ header {
         grid-template-columns: repeat(2, 320px);
         grid-template-rows: repeat(4, 320px);
     }
+
+    .carousel {
+        padding-bottom: 100px;
+
+        h1 {
+            padding-left: 50px;
+        }
+
+        a {
+            padding-left: 155px ;
+            &::before {
+                left: 50px;
+            }
+        }
+    }
 }
+
+@media (max-width: 769px) {
+
+    .who  {
+        height: auto;
+        &__description {
+            visibility: hidden;
+        }
+        ul {
+            margin: 0;
+            display: inline-block;
+            text-align: left;
+        }
+    }
+    .carousel {
+        justify-content: center;
+        .left {
+            text-align: center;
+        }
+        .right{
+            display: none;
+        }
+    }
+    .rooms {
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 28px;
+        }
+        &__btn {
+            display: none;
+        }
+    }
+    .works {
+        h2 {
+            font-size: 32px;
+            padding-top: 75px;
+
+            &::before {
+                top: 35%;
+            }
+        }
+        h3 {
+            font-size: 24px;
+        }
+    }
+    .testimonials {
+        h2 {
+            padding: 75px;
+            &::before {
+                top: 20%;
+            }
+        }
+        &__wrapper {
+            gap: 0;
+            justify-content: space-evenly;
+        }
+        &__content {
+            max-width: 40%;
+        }
+    }
+    .blog {
+        h2 {
+            font-size: 32px;
+            padding-top: 100px;
+            &::before{
+                top: 35%;
+            }
+        }
+        &__text {
+            padding-bottom: 20px;
+        }
+
+    }
+    .photos {
+        h2 {
+            font-size: 32px;
+            padding-top: 75px;
+            &::before {
+                top: 35%;
+            }
+        }
+        &__btn {
+            padding-bottom: 75px;
+        }
+
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            padding: 80px 40px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .book {
+        padding-bottom: 75px;
+        h2 {
+            font-size: 32px;
+            padding-top: 0;
+            &::before {
+                top: -75%;
+            }
+        }
+    }
+    .form {
+        h2 {
+            padding-top: 0;
+
+            &::before {
+                top: -15px;
+            }
+        }
+    }
+    .last {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 680px) {
+    .contact {
+        flex-direction: column;
+    }
+    #map {
+        width: 100%;
+        height: 600px;
+    }
+    .form {
+        width: 100%;
+
+        input:not([type="button"]) {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .works {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__content {
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .rooms h2 {
+        font-size: 19px;
+    }
+    .works {
+        h3 {
+            font-size: 21px;
+        }
+        h2 {
+            font-size: 19px;
+        }
+        &__content {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+    .carousel {
+        a {
+            padding-left: 0;
+            &::before {
+                display: none;
+            }
+        }
+        h1 {
+            font-size: 32px;
+            padding: 0 0 10px 0 ;
+        }
+    }
+    .card {
+        &__wrapper {
+            gap: 50px;
+        }
+        &__title {
+            font-size: 21px;
+        }
+    }
+    .testimonials {
+        h2 {
+            font-size: 19px;
+        }
+        &__content {
+            max-width: 90%;
+            &--second {
+                display: none;
+            }
+        }
+    }
+    .blog {
+        h2 {
+            font-size: 19px;
+        }
+        h5 {
+            font-size: 21px;
+        }
+    }
+    .who {
+        li {
+            font-size: 19px;
+        }
+    }
+    .photos {
+        h2 {
+            font-size: 19px;
+        }
+    }
+    .contact {
+        h2 {
+            font-size: 19px;
+        }
+    }
+    .book {
+        h2 {
+            font-size: 19px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+
+// P: 14px
+// smaller text : 10px

@@ -3,18 +3,22 @@
 function myMap() {
     // map options
     const options = {
-        zoom:16,
-        center:{lat:40.799353,lng:-73.953213}
+        zoom:15,
+        center:{lat:40.799353,lng:-73.953213},
+        mapId: '257331c2d7d50e2b'
     }
 
     // new map
     const map = new google.maps.Map(document.getElementById('map'), options);
 
+    // load the image
+    const image = "resources/images/logo/gmap-logo.png"
+
     // add marker
-    const marker = new google.maps.Marker({
-        position: {lat:42.4668,lng:-70.9495},
+    new google.maps.Marker({
+        position: {lat:40.799353,lng:-73.953213},
         map:map,
-        // icon:'[../images/logo/gmap-logo.png]'
+        icon: image     // add img as icon to map:map
     });
 }
 
@@ -33,6 +37,8 @@ carouselBtnOne.addEventListener('click', () => {
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
+    firstTitle.innerHTML = "You Are"
+    secondTitle.innerHTML = "Locked In!"
 });
 
 carouselBtnTwo.addEventListener('click', () => {
@@ -40,6 +46,8 @@ carouselBtnTwo.addEventListener('click', () => {
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
+    firstTitle.innerHTML = 'The Clock'
+    secondTitle.innerHTML = 'Is Ticking...'
 })
 
 carouselBtnThree.addEventListener('click', () => {
@@ -47,6 +55,8 @@ carouselBtnThree.addEventListener('click', () => {
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
+    firstTitle.innerHTML = 'Escape'
+    secondTitle.innerHTML = 'in 60 mins?'
 })
 
 carouselBtnFour.addEventListener('click', () => {
@@ -54,6 +64,8 @@ carouselBtnFour.addEventListener('click', () => {
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
+    firstTitle.innerHTML = 'What is'
+    secondTitle.innerHTML = 'Escapium?'
 })
 
 carousel.addEventListener('animationend', () => {
