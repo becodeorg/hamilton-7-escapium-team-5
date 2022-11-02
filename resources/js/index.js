@@ -30,7 +30,29 @@ const carouselBtnTwo = document.getElementById('carousel__btn-two');
 const carouselBtnThree = document.getElementById('carousel__btn-three');
 const carouselBtnFour = document.getElementById('carousel__btn-four');
 const firstTitle = document.getElementById('title__first-p');
-const secondTitle = document.getElementById('title__second-p')
+const secondTitle = document.getElementById('title__second-p');
+
+let i = 1;
+let images = [];
+const interval = setInterval(function() {
+    startCarousel();
+}, 10000);
+
+startCarousel = () => {
+    carousel.style.backgroundImage = `linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(${images[i++]})`;
+    carousel.classList.add("switchCarousel");
+    // firstTitle.classList.add('transitionIn')
+    // secondTitle.classList.add('transitionInDelay')
+    if (i > images.length - 1) {
+        i = 0
+    }
+}
+
+images[0] = '/resources/images/gallery/slide-1.jpg'
+images[1] = '/resources/images/gallery/slide-2.jpg'
+images[2] = '/resources/images/gallery/slide-3.jpg'
+images[3] = '/resources/images/gallery/slide-4.jpg'
+
 
 carouselBtnOne.addEventListener('click', () => {
     carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(/resources/images/gallery/slide-1.jpg)';
@@ -79,3 +101,20 @@ firstTitle.addEventListener('animationend', () => {
 secondTitle.addEventListener('animationend', () => {
     secondTitle.classList.remove('transitionInDelay')
 })
+
+
+// mobile nav
+
+const navLink = document.getElementById("nav__mobile");
+const toggleBtn = document.getElementById("hamburger")
+
+toggleBtn.addEventListener('click', () => {
+    if (navLink.style.display === "block") {
+        navLink.style.display = "none";
+      } else {
+        navLink.style.display = "block";
+      }
+})
+
+// hamburger . close 
+
