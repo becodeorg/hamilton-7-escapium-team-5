@@ -1,0 +1,141 @@
+@use '../scss/base/typographie' as t;
+* {
+    margin: 0;
+    padding: 0;
+}
+footer{
+    display: flex;
+    width: 100%;
+    color: #717171;
+    font-size: 14px;
+    font-family: t.$font_paragraphs;
+    background-image: url(../images/gallery/slide-3.jpg);
+}
+.backgroundFooter{
+    width: 100%;
+    backdrop-filter: brightness(0.1);
+}
+.sectionFooter{
+    width: fit-content;
+    margin: 10px;
+}
+.endFooter{
+    display: flex;
+    flex-wrap: wrap;
+    margin:30px 20px 0px 20px ;
+    h4{
+        color: #fefefe;
+        font-family: t.$font__heading;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        font-size: 21px;
+    }
+}
+.numberFooter{
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    hr{
+        transform: rotate(90deg);
+        height: 20px;
+        margin-left: 20px;
+        border-color: #F60B0E;
+    }
+}
+
+.endFooter_address{
+    margin: 15px 0px 20px 20px;
+    line-height: 20px;
+}
+.endFooter_usefulLinks{
+    margin: 15px 0px 20px 20px;
+    ul{
+        padding: 0px;
+    }
+    li{
+        list-style: none;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    a{
+        text-decoration: none;
+        color: #717171;
+    }
+}
+
+.endFooter_working{
+    margin: 15px 0px 20px 20px;
+    .endFooter_working_hours{
+        display: flex;
+        flex-direction: row;
+    }
+    .endFooter_working_hours_day{
+        margin-right: 20px;
+        line-height: 35px;
+    }
+    .endFooter_working_hours_time{
+        line-height: 35px;
+    }
+}
+.endFooter_socialLinks{
+    margin: 15px 0px 20px 20px;
+    .svg-inline--fa{
+        width: 16px;
+        height: 16px;
+        color: #fefefe;
+        background-color:#1B1B1B;
+        border-radius: 20px;
+        padding: 10px;
+        margin-right: 5px;
+        margin-top: 15px;
+    }
+}
+.endFooter_end{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    img{
+        width: 110px;
+        margin: 15px 0px;
+    }
+}
+
+.emailFooter{
+    color: #fefefe;
+}
+
+//screen tablet 768px
+@media screen and (min-width:760px) and (max-width:1023px)
+{
+    // footer{
+    //     font-size: 16px;
+    // }
+    // h4{
+    //     font-size: 32px;
+    // }
+    .endFooter{
+        justify-content: space-around;
+    }
+    .sectionFooter {
+        width: 140px;
+    }
+    .endFooter_working_hours_day {
+        p{
+        margin-bottom: 35px;
+        }
+        #wednesdayFooter{
+            margin-bottom: 0px;
+        }
+    }
+}
+
+//screen laptop min 1024px
+@media screen and (min-width: 1024px) {
+    .endFooter{
+        justify-content: space-around;
+    }
+}
