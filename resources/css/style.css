@@ -14,7 +14,7 @@
 }
 
 .titlePageRooms {
-  height: 180px;
+  height: 100%;
   background-image: url(../images/gallery/slide-1.jpg);
   background-size: cover;
   background-position: center;
@@ -216,22 +216,24 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .rooms p {
-    font-size: 16px;
-    grid-template-columns: repeat(4, 300px);
+  .rooms {
+    grid-template-columns: repeat(4, 320px);
     grid-gap: 0.2em;
-    grid-auto-rows: 380px;
+    grid-auto-rows: 400px;
     padding-bottom: 100px;
     justify-content: center;
   }
+  .rooms p {
+    font-size: 16px;
+  }
   .backgroundRooms h1 {
-    font-size: 44px;
+    font-size: 120px;
   }
   .backgroundRooms p {
     font-size: 16px;
   }
   .backgroundRooms h2 {
-    font-size: 32px;
+    font-size: 44px;
   }
   .buttonSectionRooms {
     height: 150px;
