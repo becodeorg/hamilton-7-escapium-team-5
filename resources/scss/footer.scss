@@ -1,3 +1,4 @@
+@use '../scss/base/typographie' as t;
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +6,9 @@
 footer{
     display: flex;
     width: 100%;
-    color: gray;
+    color: #717171;
     font-size: 14px;
-    font-family: Hind, sans-serif;
+    font-family: t.$font_paragraphs;
     background-image: url(../images/gallery/slide-3.jpg);
 }
 .backgroundFooter{
@@ -23,8 +24,8 @@ footer{
     flex-wrap: wrap;
     margin:30px 20px 0px 20px ;
     h4{
-        color: whitesmoke;
-        font-family: Montserrat, sans-serif;
+        color: #fefefe;
+        font-family: t.$font__heading;
         margin-top: 20px;
         margin-bottom: 25px;
         font-size: 21px;
@@ -38,7 +39,7 @@ footer{
         transform: rotate(90deg);
         height: 20px;
         margin-left: 20px;
-        border-color: red;
+        border-color: #F60B0E;
     }
 }
 
@@ -58,7 +59,7 @@ footer{
     }
     a{
         text-decoration: none;
-        color: gray;
+        color: #717171;
     }
 }
 
@@ -81,8 +82,8 @@ footer{
     .svg-inline--fa{
         width: 16px;
         height: 16px;
-        color: whitesmoke;
-        background-color:gray;
+        color: #fefefe;
+        background-color:#1B1B1B;
         border-radius: 20px;
         padding: 10px;
         margin-right: 5px;
@@ -104,7 +105,7 @@ footer{
 }
 
 .emailFooter{
-    color: whitesmoke;
+    color: #fefefe;
 }
 
 //screen tablet 768px
