@@ -14,16 +14,23 @@ footer{
     width: 100%;
     backdrop-filter: brightness(0.1);
 }
-.section{
+.sectionFooter{
     width: fit-content;
     margin: 10px;
 }
-.end{
+.endFooter{
     display: flex;
     flex-wrap: wrap;
     margin:30px 20px 0px 20px ;
+    h4{
+        color: whitesmoke;
+        font-family: Montserrat, sans-serif;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        font-size: 21px;
+    }
 }
-.number{
+.numberFooter{
     width: 70px;
     display: flex;
     flex-direction: row;
@@ -34,36 +41,42 @@ footer{
         border-color: red;
     }
 }
-h4{
-    color: whitesmoke;
-    font-family: Montserrat, sans-serif;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-size: 21px;
-}
-.end_address{
+
+.endFooter_address{
     margin: 15px 0px 20px 20px;
     line-height: 20px;
 }
-.end_usefulLinks{
+.endFooter_usefulLinks{
     margin: 15px 0px 20px 20px;
+    ul{
+        padding: 0px;
+    }
+    li{
+        list-style: none;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    a{
+        text-decoration: none;
+        color: gray;
+    }
 }
 
-.end_working{
+.endFooter_working{
     margin: 15px 0px 20px 20px;
-    .end_working_hours{
+    .endFooter_working_hours{
         display: flex;
         flex-direction: row;
     }
-    .end_working_hours_day{
+    .endFooter_working_hours_day{
         margin-right: 20px;
         line-height: 35px;
     }
-    .end_working_hours_time{
+    .endFooter_working_hours_time{
         line-height: 35px;
     }
 }
-.end_socialLinks{
+.endFooter_socialLinks{
     margin: 15px 0px 20px 20px;
     .svg-inline--fa{
         width: 16px;
@@ -76,7 +89,7 @@ h4{
         margin-top: 15px;
     }
 }
-.endFooter{
+.endFooter_end{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -89,19 +102,8 @@ h4{
         margin: 15px 0px;
     }
 }
-ul{
-    padding: 0px;
-}
-li{
-    list-style: none;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-}
-a{
-    text-decoration: none;
-    color: gray;
-}
-.email{
+
+.emailFooter{
     color: whitesmoke;
 }
 
@@ -114,17 +116,25 @@ a{
     // h4{
     //     font-size: 32px;
     // }
-    .end{
+    .endFooter{
         justify-content: space-around;
     }
-    .section {
+    .sectionFooter {
         width: 140px;
+    }
+    .endFooter_working_hours_day {
+        p{
+        margin-bottom: 35px;
+        }
+        #wednesdayFooter{
+            margin-bottom: 0px;
+        }
     }
 }
 
 //screen laptop min 1024px
 @media screen and (min-width: 1024px) {
-    .end{
+    .endFooter{
         justify-content: space-around;
     }
 }

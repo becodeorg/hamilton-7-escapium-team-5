@@ -12,44 +12,44 @@ footer {
   background-image: url(../images/gallery/slide-3.jpg);
 }
 
-.background {
+.backgroundFooter{
   width: 100%;
-  -webkit-backdrop-filter: brightness(0.1);
-          backdrop-filter: brightness(0.1);
+  backdrop-filter: brightness(0.1);
 }
 
-.section {
+.sectionFooter {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 10px;
 }
 
-.end {
+.endFooter {
   display: flex;
   flex-wrap: wrap;
   margin: 30px 20px 0px 20px;
+  h4 {
+    color: whitesmoke;
+    font-family: Montserrat, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 21px;
+  }
 }
 
-.number {
+.numberFooter {
   width: 70px;
   display: flex;
   flex-direction: row;
 }
-.number hr {
+.numberFooter hr {
   transform: rotate(90deg);
   height: 20px;
   margin-left: 20px;
   border-color: #F60B0E;
 }
 
-h4 {
-  color: whitesmoke;
-  font-family: Montserrat, sans-serif;
-  margin-top: 20px;
-  margin-bottom: 25px;
-  font-size: 21px;
-}
+
 
 .end_address {
   margin: 15px 0px 20px 20px;
