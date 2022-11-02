@@ -115,6 +115,3 @@ toggleBtn.addEventListener('click', () => {
         navLink.style.display = "block";
       }
 })
-
-// hamburger . close 
-
