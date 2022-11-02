@@ -142,22 +142,25 @@
         line-height: 5px;
         color: white;
     }
-
 }
 
 .close {
-    &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    &:nth-child(2) {
-        opacity: 0;
-    }
-
-    &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
+        span {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(8px);
+            }
+        
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(6px);
+            }
+        }
+    
 }
+
 
 
 @media (max-width: 1245px) {
