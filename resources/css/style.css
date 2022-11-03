@@ -1138,10 +1138,10 @@ header {
 }
 .titlePageRooms p {
   padding-bottom: 70px;
-  font-size: small;
+  font-size: 14px;
 }
 .titlePageRooms h1 {
-  font-size: xx-large;
+  font-size: 32px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1168,7 +1168,7 @@ header {
   border: none;
 }
 
-.rooms {
+.roomsPage {
   background-color: #222222;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1187,7 +1187,7 @@ header {
 .backgroundRooms h2 {
   margin: 10px 10px 10px 30px;
   color: #fefefe;
-  font-size: large;
+  font-size: 19px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1281,7 +1281,7 @@ header {
 }
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
-  .rooms {
+  .roomsPage {
     grid-template-columns: repeat(4, 180px);
     grid-gap: 0.2em;
     grid-auto-rows: 260px;
@@ -1328,14 +1328,14 @@ header {
   }
 }
 @media screen and (min-width: 1024px) {
-  .rooms {
-    grid-template-columns: repeat(4, 320px);
+  .roomsPage {
+    grid-template-columns: repeat(4, 250px);
     grid-gap: 0.2em;
-    grid-auto-rows: 400px;
+    grid-auto-rows: 370px;
     padding-bottom: 100px;
     justify-content: center;
   }
-  .rooms p {
+  .roomsPage p {
     font-size: 16px;
   }
   .backgroundRooms h1 {
@@ -1345,7 +1345,7 @@ header {
     font-size: 16px;
   }
   .backgroundRooms h2 {
-    font-size: 44px;
+    font-size: 20px;
   }
   .buttonSectionRooms {
     height: 150px;
@@ -1495,6 +1495,27 @@ footer {
   .endFooter {
     justify-content: space-around;
   }
+}
+* {
+  font-family: "Hind", sans-serif;
+  font-size: 14px;
+  background-color: #1B1B1B;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+}
+
+.theCure_titlePage {
+  background-image: url(../images/gallery/slide-3.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */
