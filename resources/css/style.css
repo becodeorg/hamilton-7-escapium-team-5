@@ -1157,7 +1157,7 @@ header {
 .buttonSectionRooms button {
   width: 160px;
   height: 35px;
-  border-radius: 20px;
+  border-radius: 35px;
   color: #fefefe;
   background-color: #222222;
   border: 1px solid #fefefe;
@@ -1195,7 +1195,8 @@ header {
   margin: 10px 10px 10px 30px;
 }
 .lockIconRooms .svg-inline--fa {
-  height: 0.9em;
+  height: 1.4em;
+  margin-left: 2px;
 }
 
 .infoRooms {
@@ -1510,7 +1511,8 @@ h1 {
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .theCure_titlePage {
@@ -1568,7 +1570,9 @@ h2 {
 
 .theCure_generalInfo_phone {
   display: flex;
-  margin: 10px 0px 10px 20px;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 .theCure_generalInfo_phone p {
   margin-left: 20px;
@@ -1577,7 +1581,9 @@ h2 {
 
 .theCure_generalInfo_email {
   display: flex;
-  margin: 10px 0px 10px 20px;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 .theCure_generalInfo_email p {
   margin-left: 20px;
@@ -1586,7 +1592,9 @@ h2 {
 
 .theCure_generalInfo_skype {
   display: flex;
-  margin: 10px 0px 10px 20px;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 .theCure_generalInfo_skype p {
   margin-left: 20px;
@@ -1595,11 +1603,52 @@ h2 {
 
 .theCure_generalInfo_location {
   display: flex;
-  margin: 10px 0px 10px 20px;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 .theCure_generalInfo_location p {
   margin-left: 20px;
   color: gray;
+}
+
+.theCure_generalInfo_bookingButton {
+  color: #fefefe;
+  background-color: #F60B0E;
+  border: none;
+  padding: 12px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 35px;
+  margin: 20px 20px 40px 20px;
+}
+
+.theCure_generalInfo_bookingButton:hover {
+  opacity: 0.7;
+  transition: ease-in 0.2s;
+}
+
+.theCure_otherRooms {
+  background-color: #1B1B1B;
+  width: auto;
+  height: 100%;
+  padding-bottom: 100px;
+}
+.theCure_otherRooms h2 {
+  font-size: 28px;
+  margin: 0px 0px 8px 20px;
+  font-weight: 700;
+  color: #fefefe;
+}
+.theCure_otherRooms .rooms_theMysticalRoom {
+  width: 380px;
+  height: 370px;
+  margin: 20px;
+  color: #fefefe;
+}
+.theCure_otherRooms .rooms_theMysticalRoom h3 {
+  margin-left: 30px;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
