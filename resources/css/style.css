@@ -1498,24 +1498,108 @@ footer {
 }
 * {
   font-family: "Hind", sans-serif;
-  font-size: 14px;
-  background-color: #1B1B1B;
+  font-size: 12px;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 32px;
+  color: #fefefe;
+  font-size: 28px;
+  margin: 0px 0px 8px 20px;
 }
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .theCure_titlePage {
+  height: 200px;
   background-image: url(../images/gallery/slide-3.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.backgroundTheCure {
+  backdrop-filter: brightness(0.4);
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.theCure_generalInfo {
+  background-color: #1B1B1B;
+}
+
+.theCure_generalInfo_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 30px 40px 15px 40px;
+}
+.theCure_generalInfo_head p {
+  color: #fefefe;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.theCure_generalInfo_players_icon, .theCure_generalInfo_minutes_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.theCure_generalInfo_players_icon p, .theCure_generalInfo_minutes_icon p {
+  color: gray;
+  margin-left: 10px;
+}
+
+.theCure_generalInfo_text {
+  color: gray;
+  margin: 20px 20px 10px 20px;
+}
+.theCure_generalInfo_text p {
+  margin-left: 20px;
+}
+
+.theCure_generalInfo_phone {
+  display: flex;
+  margin: 10px 0px 10px 20px;
+}
+.theCure_generalInfo_phone p {
+  margin-left: 20px;
+  color: #fefefe;
+}
+
+.theCure_generalInfo_email {
+  display: flex;
+  margin: 10px 0px 10px 20px;
+}
+.theCure_generalInfo_email p {
+  margin-left: 20px;
+  color: #fefefe;
+}
+
+.theCure_generalInfo_skype {
+  display: flex;
+  margin: 10px 0px 10px 20px;
+}
+.theCure_generalInfo_skype p {
+  margin-left: 20px;
+  color: #fefefe;
+}
+
+.theCure_generalInfo_location {
+  display: flex;
+  margin: 10px 0px 10px 20px;
+}
+.theCure_generalInfo_location p {
+  margin-left: 20px;
+  color: gray;
 }
 
 /*# sourceMappingURL=style.css.map */
