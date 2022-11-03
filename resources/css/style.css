@@ -1171,7 +1171,7 @@ header {
 .roomsPage {
   background-color: #222222;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 375px));
   grid-gap: 1em;
   grid-auto-rows: 550px;
 }
@@ -1321,11 +1321,15 @@ header {
   .lockIconRooms {
     margin: 5px 5px 5px 20px;
   }
+  .lockIconRooms .svg-inline--fa {
+    height: 1em;
+    margin-left: 2px;
+  }
   .infoRooms_people, .infoRooms_clock, .infoRooms_location {
     margin-bottom: 0px !important;
   }
   .infoRooms .svg-inline--fa {
-    margin-top: 6px;
+    margin-top: 2px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1359,6 +1363,15 @@ header {
     width: 100px;
     margin-bottom: 15px;
     margin-right: 15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .roomsPage {
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 0.2em;
+    grid-auto-rows: 400px;
+    padding-bottom: 100px;
+    justify-content: center;
   }
 }
 * {
@@ -1416,7 +1429,7 @@ footer {
 }
 
 .endFooter_usefulLinks {
-  margin: 15px 0px 20px 20px;
+  margin: 15px 0px 20px 26px;
 }
 .endFooter_usefulLinks ul {
   padding: 0px;
@@ -1429,6 +1442,10 @@ footer {
 .endFooter_usefulLinks a {
   text-decoration: none;
   color: #717171;
+}
+
+.endFooter_usefulLinks a:hover {
+  color: #F60B0E;
 }
 
 .endFooter_working {
@@ -1502,32 +1519,10 @@ footer {
   font-size: 14px;
 }
 
-h1 {
-  font-family: "Montserrat", sans-serif;
-  color: #fefefe;
-  font-size: 28px;
-  margin: 0px 0px 8px 20px;
-}
-
 h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
-}
-
-.theCure_titlePage {
-  height: 200px;
-  background-image: url(../images/gallery/slide-3.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.backgroundTheCure {
-  backdrop-filter: brightness(0.4);
-  width: auto;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
 }
 
 .theCure_generalInfo {
@@ -1683,6 +1678,54 @@ h2 {
 }
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
+  .theCure_otherRooms h2 {
+    margin-left: 40px;
+    padding-top: 100px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-gap: 0.2em;
+    grid-auto-rows: minmax(250px, 1fr);
+    margin: 0px 30px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_theMysticalRoom {
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_theMysticalRoom h3 {
+    margin-left: 20px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_bunker51 {
+    display: block;
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_bunker51 h3 {
+    margin-left: 20px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_backToTheFutur {
+    display: block;
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_backToTheFutur h3 {
+    margin-left: 20px;
+  }
+  .theCure_generalInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 25px;
+  }
+  .theCure_generalInfo_inside {
+    display: flex;
+    flex-direction: column;
+  }
+  .theCure_generalInfo_footer {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
   h1 {
     font-size: 44px;
     margin: 0px 0px 10px 25px;

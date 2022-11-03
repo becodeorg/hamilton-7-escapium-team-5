@@ -47,7 +47,7 @@
 .roomsPage{
     background-color:  #222222;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-template-columns:repeat(auto-fit, minmax(250px, 375px)); 
     grid-gap: 1em;
     grid-auto-rows: 550px;
 }
@@ -192,12 +192,16 @@
     }
     .lockIconRooms{
         margin: 5px 5px 5px 20px;
+        .svg-inline--fa {
+            height: 1em;
+            margin-left: 2px;
+            }
     }
     .infoRooms_people, .infoRooms_clock, .infoRooms_location{
         margin-bottom: 0px !important;
     }
     .infoRooms .svg-inline--fa {
-        margin-top: 6px;
+        margin-top: 2px;
     }
 }
 //screen laptop min 1024px
@@ -234,5 +238,15 @@
             margin-bottom: 15px;
             margin-right: 15px;
         }
+    }
+}
+
+@media screen and (min-width: 1920px){
+    .roomsPage {
+        grid-template-columns: repeat(4, 300px);
+        grid-gap: 0.2em;
+        grid-auto-rows: 400px;
+        padding-bottom: 100px;
+        justify-content: center;
     }
 }
