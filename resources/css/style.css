@@ -1291,6 +1291,9 @@ header {
 .form__heading::before {
   display: none;
 }
+.form__new {
+  width: 60%;
+}
 
 .full {
   width: 100%;
@@ -1300,6 +1303,7 @@ header {
   background-color: #222222;
   width: 40%;
   padding-left: 50px;
+  color: #777;
 }
 .informations h2 {
   padding-top: 150px;
@@ -1307,16 +1311,48 @@ header {
   position: relative;
   color: white;
 }
-.informations p {
-  color: #777;
+.informations__description {
+  padding-bottom: 20px;
 }
 .informations__list {
   list-style: none;
 }
 .informations__elements {
+  display: flex;
+  align-items: center;
   padding-bottom: 20px;
 }
+.informations__elements p {
+  padding-left: 20px;
+}
 
+.btn__red {
+  background-color: red !important;
+  border: none !important;
+  width: 80%;
+}
+
+@media (max-width: 769px) {
+  .informations h2 {
+    padding-top: 50px;
+  }
+  .informations__list {
+    padding: 0;
+  }
+}
+@media (max-width: 680px) {
+  .informations {
+    width: 100%;
+  }
+  .form__new {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .header__top h1 {
+    font-size: 32px;
+  }
+}
 .nav {
   background-color: #222222;
 }
