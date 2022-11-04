@@ -631,13 +631,13 @@ header {
   color: white;
   position: relative;
 }
-.blog h2 {
+.blog__title {
   font-size: 44px;
   padding-top: 200px;
   padding-bottom: 25px;
   position: relative;
 }
-.blog h2::before {
+.blog__title::before {
   position: absolute;
   content: "";
   width: 35px;
@@ -1264,8 +1264,15 @@ header {
   gap: 25px;
   padding: 50px 0 150px 0;
 }
-.certificates img:hover {
-  transform: scale(1.02);
+
+.img__wrapper {
+  width: 263px;
+  height: 376px;
+  overflow: hidden;
+}
+.img__wrapper:hover img {
+  transform: scale(1.05);
+  transition: ease 0.5s;
 }
 
 .team {
