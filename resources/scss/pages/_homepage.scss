@@ -819,15 +819,7 @@ header {
             text-align: left;
         }
     }
-    .carousel {
-        justify-content: center;
-        .left {
-            text-align: center;
-        }
-        .right{
-            display: none;
-        }
-    }
+
     .rooms {
         h2 {
             font-size: 32px;
@@ -926,6 +918,15 @@ header {
 }
 
 @media (max-width: 680px) {
+    .carousel {
+        justify-content: center;
+        .left {
+            text-align: center;
+        }
+        .right{
+            display: none;
+        }
+    }
     .contact {
         flex-direction: column;
     }
