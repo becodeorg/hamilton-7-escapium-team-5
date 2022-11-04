@@ -1506,4 +1506,26 @@ h5 {
   box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.75);
 }
 
+.grid__Instagram {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20% 20%;
+  align-content: center;
+  gap: 10px;
+  padding: 10%;
+}
+
+.img__Instagram {
+  width: 100%;
+}
+
+.Archives {
+  text-align: left;
+  margin: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
 /*# sourceMappingURL=style.css.map */
