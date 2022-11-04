@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;700&display=swap");
 /* Box sizing rules */
@@ -70,6 +71,204 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+@keyframes fromLeft {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav {
+  background-color: #222222;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+.nav ul li a:hover:not(.right) {
+  color: white;
+}
+.nav ul li a:hover:not(.right)::before {
+  content: "";
+  width: 2px;
+  height: 35px;
+  position: absolute;
+  background-color: red;
+  left: 50%;
+  top: 18px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.nav__mobile {
+  position: fixed;
+  display: none;
+  z-index: 5;
+  background-color: #222222;
+  animation: fromLeft 0.4s;
+}
+.nav__mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav__mobile ul li {
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav__mobile ul li a {
+  color: white;
+  font-weight: 600;
+}
+.nav__mobile ul li img {
+  width: 25px;
+  filter: invert(1);
+  margin-right: 20px;
+}
+.nav__btn {
+  border: 1px solid #777;
+  border-radius: 35px;
+  padding: 10px 25px;
+}
+.nav__btn:hover {
+  color: #777;
+}
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__left {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav__left li a {
+  padding: 24px;
+  color: #777;
+}
+.nav__right {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav__right li {
+  padding: 10px;
+  color: #777;
+}
+.nav__right li a {
+  color: white;
+}
+.nav__right__sign {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.nav__right__sign:hover {
+  color: #777;
+}
+.nav__icon {
+  width: 25px;
+  filter: invert(100%) sepia(94%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
+}
+.nav__logo {
+  padding-right: 50px;
+}
+
+.search {
+  width: 15px;
+  transform: translate(0, 5px);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding-right: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+.hamburger span {
+  line-height: 5px;
+  color: white;
+}
+
+.close span:nth-child(1) {
+  transform: rotate(45deg) translate(8px);
+}
+.close span:nth-child(2) {
+  opacity: 0;
+}
+.close span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px);
+}
+
+@media (max-width: 1245px) {
+  .nav__btn {
+    display: none;
+  }
+}
+@media (max-width: 1110px) {
+  .nav__logo {
+    padding-right: 10px;
+  }
+  .nav__left li a {
+    padding: 25px 10px;
+  }
+}
+@media (max-width: 870px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav__mobile {
+    display: none;
+    height: 100%;
+    width: 75%;
+    z-index: 200;
+  }
+  .nav__mobile__sign {
+    display: flex;
+  }
+  .nav {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(43, 43, 43, 0.5);
+    z-index: 100;
+  }
+  .nav__wrapper {
+    position: fixed;
+    width: 100%;
+  }
+  .nav__left a {
+    display: none;
+  }
+  .nav__right li {
+    padding: 5px;
+  }
+  .nav__right__sign {
+    display: none;
+  }
+  .nav__icon:not(.search) {
+    display: none;
+  }
+  .vertical__rule {
+    display: none;
+  }
+  .search {
+    transform: translate(-50px, -5px);
   }
 }
 body {
@@ -405,19 +604,40 @@ header {
   letter-spacing: 2.5px;
 }
 
+.slider {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 75px;
+}
+.slider__middle {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: #717171;
+  transform: translateY(90px) rotate(-45deg);
+}
+.slider__left, .slider__right {
+  font-size: 100px;
+  cursor: pointer;
+}
+.slider__left:hover, .slider__right:hover {
+  color: #F60B0E;
+}
+
 .blog {
   text-align: center;
   background-color: #1B1B1B;
   color: white;
   position: relative;
 }
-.blog h2 {
+.blog__title {
   font-size: 44px;
   padding-top: 200px;
   padding-bottom: 25px;
   position: relative;
 }
-.blog h2::before {
+.blog__title::before {
   position: absolute;
   content: "";
   width: 35px;
@@ -544,7 +764,7 @@ header {
   color: white;
 }
 .photos h2 {
-  font-size: 52px;
+  font-size: 44px;
   padding: 200px 0 25px;
   position: relative;
 }
@@ -592,11 +812,9 @@ header {
 }
 .contact .gmap {
   width: 50%;
-  height: auto;
-  background-color: cadetblue;
 }
 
-#map {
+.map {
   width: 50%;
 }
 
@@ -607,7 +825,7 @@ header {
 }
 .form h2 {
   padding-top: 100px;
-  font-size: 32px;
+  font-size: 44px;
   color: white;
   position: relative;
 }
@@ -910,6 +1128,9 @@ header {
   .testimonials__content--second {
     display: none;
   }
+  .slider {
+    display: none;
+  }
   .blog h2 {
     font-size: 19px;
   }
@@ -932,193 +1153,402 @@ header {
     font-size: 14px;
   }
 }
-.nav {
-  background-color: #222222;
+@keyframes dropDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
-.nav ul li {
-  list-style: none;
+.header__top {
+  text-align: center;
+  color: white;
+  background-image: url("../images/gallery/slide-1.jpg");
+  background-size: cover;
 }
-.nav ul li a {
+.header__top h1 {
+  padding-top: 75px;
+  padding-bottom: 25px;
+  font-size: 120px;
+}
+.header__top h1 span {
+  color: red;
+}
+.header__top p {
+  text-transform: uppercase;
+  padding-bottom: 75px;
   font-size: 14px;
-  font-weight: 600;
+  word-spacing: 15px;
+}
+.header__top p span {
+  color: #777;
+}
+
+.play {
+  background-color: #1B1B1B;
+  color: white;
+  text-align: center;
+}
+.play h2 {
+  padding-top: 150px;
+  font-size: 44px;
   position: relative;
-  z-index: 1;
 }
-.nav ul li a:hover:not(.right) {
-  color: white;
-}
-.nav ul li a:hover:not(.right)::before {
-  content: "";
-  width: 2px;
-  height: 35px;
+.play h2::before {
   position: absolute;
-  background-color: red;
+  content: "";
+  width: 35px;
+  height: 2px;
+  background-color: #717171;
+  top: 40%;
   left: 50%;
-  top: 18px;
-  transform: rotate(45deg);
-  z-index: -1;
+  transform: translate(-50%, 0);
 }
-.nav__mobile {
-  position: fixed;
-  display: none;
-  z-index: 5;
-  background-color: #222222;
+.play__wrapper {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
 }
-.nav__mobile ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.nav__mobile ul li {
+.play__content {
+  text-align: center;
+  max-width: 450px;
+  height: 450px;
   padding: 30px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
-.nav__mobile ul li a {
-  color: white;
-  font-weight: 600;
+.play__content img {
+  width: 75px;
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
+  padding-bottom: 50px;
 }
-.nav__mobile ul li img {
-  width: 25px;
-  filter: invert(1);
-  margin-right: 20px;
+.play__content h3 {
+  font-size: 32px;
+  padding: 20px 0;
 }
-.nav__btn {
-  border: 1px solid #777;
-  border-radius: 35px;
-  padding: 10px 25px;
-}
-.nav__btn:hover {
-  color: #777;
-}
-.nav__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav__left {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-.nav__left li a {
-  padding: 24px;
-  color: #777;
-}
-.nav__right {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.nav__right li {
-  padding: 10px;
-  color: #777;
-}
-.nav__right li a {
-  color: white;
-}
-.nav__right__sign {
-  padding-left: 0;
-  padding-right: 20px;
-}
-.nav__right__sign:hover {
-  color: #777;
-}
-.nav__icon {
-  width: 25px;
-  filter: invert(100%) sepia(94%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
-}
-.nav__logo {
-  padding-right: 50px;
+.play__content p {
+  color: #717171;
 }
 
-.search {
-  width: 15px;
-  transform: translate(0, 5px);
+.video {
+  width: 100%;
+  height: 400px;
 }
 
-.hamburger {
+.certificates {
+  background-color: #1B1B1B;
+  color: white;
+  text-align: center;
+}
+.certificates h2 {
+  padding-top: 150px;
+  font-size: 44px;
+  position: relative;
+}
+.certificates h2::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  background-color: #717171;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.certificates__wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  padding-right: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  display: none;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 50px 0 150px 0;
 }
-.hamburger span {
-  line-height: 5px;
+
+.team {
+  background-color: #242424;
   color: white;
 }
+.team h2 {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  font-size: 44px;
+  position: relative;
+  text-align: center;
+}
+.team h2::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  background-color: #717171;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.team__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.team__wrapper img {
+  width: 100%;
+  filter: brightness(60%);
+}
+.team__wrapper img:hover {
+  filter: brightness(100%);
+  outline: 10px solid #F60B0E;
+  outline-offset: -10px;
+  transition: ease 0.3s;
+}
+.team__card {
+  padding-bottom: 50px;
+}
+.team__card__text {
+  padding: 30px;
+}
+.team__card p {
+  color: #717171;
+}
 
-.close:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.people-say {
+  background-color: #1B1B1B;
+  color: white;
+  text-align: center;
 }
-.close:nth-child(2) {
-  opacity: 0;
+.people-say h2 {
+  padding-top: 150px;
+  padding-bottom: 25px;
+  font-size: 44px;
+  position: relative;
+  text-align: center;
 }
-.close:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
+.people-say h2::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  background-color: #717171;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.people-say a {
+  color: #F60B0E;
+}
+.people-say__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 50px;
+}
+.people-say__content {
+  max-width: 30%;
+}
+.people-say .quote {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 16px;
+  color: #717171;
+}
+.people-say img {
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+.people-say .name {
+  text-align: center;
+  padding-bottom: 75px;
+  letter-spacing: 2.5px;
 }
 
-@media (max-width: 1245px) {
-  .nav__btn {
-    display: none;
-  }
+.faqs {
+  text-align: center;
 }
-@media (max-width: 1110px) {
-  .nav__logo {
-    padding-right: 10px;
-  }
-  .nav__left li a {
-    padding: 10px;
-  }
+.faqs h2 {
+  padding-top: 150px;
+  font-size: 44px;
+  position: relative;
 }
+.faqs h2::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  background-color: #717171;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.faqs .subheading {
+  color: #717171;
+}
+.faqs__container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+.faqs__question {
+  padding: 30px 20px;
+  cursor: pointer;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+}
+.faqs__question:hover {
+  color: #F60B0E;
+}
+.faqs__question::before {
+  content: "➕";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -50px;
+  top: 15px;
+}
+.faqs__answer {
+  color: #1B1B1B;
+  display: none;
+  overflow: hidden;
+  animation: dropDown 0.3s;
+  padding: 0 20px 20px 20px;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.active::before {
+  content: "➖";
+}
+
 @media (max-width: 870px) {
-  .hamburger {
-    display: flex;
+  .header__top h1 {
+    padding-top: 150px;
   }
-  .nav__mobile {
+}
+@media (max-width: 769px) {
+  .play h2, .certificates h2, .team h2, .people-say h2, .faqs h2 {
+    font-size: 32px;
+    padding-top: 75px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .play h2::before, .certificates h2::before, .team h2::before, .people-say h2::before, .faqs h2::before {
+    top: 35%;
+  }
+  .play h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 660px) {
+  .play__wrapper {
+    flex-wrap: wrap;
+  }
+  .play__content {
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .slider {
     display: none;
-    height: 100%;
-    width: 75%;
-    z-index: 200;
   }
-  .nav__mobile__sign {
-    display: flex;
+  .people-say__content {
+    max-width: 90%;
   }
-  .nav {
-    position: fixed;
+  .people-say__content--second {
+    display: none;
+  }
+}
+.map__full {
+  width: 100%;
+  height: 100%;
+}
+
+.section__map {
+  height: 500px;
+}
+
+.form__message__full {
+  width: 90% !important;
+}
+.form__name-email {
+  display: flex;
+}
+.form__heading::before {
+  display: none;
+}
+.form__new {
+  width: 60%;
+}
+
+.full {
+  width: 100%;
+}
+
+.informations {
+  background-color: #222222;
+  width: 40%;
+  padding-left: 50px;
+  color: #777;
+}
+.informations h2 {
+  padding-top: 150px;
+  font-size: 44px;
+  position: relative;
+  color: white;
+}
+.informations__description {
+  padding-bottom: 20px;
+}
+.informations__list {
+  list-style: none;
+}
+.informations__elements {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.informations__elements p {
+  padding-left: 20px;
+}
+
+.btn__red {
+  background-color: red !important;
+  border: none !important;
+  width: 80%;
+}
+
+@media (max-width: 769px) {
+  .informations h2 {
+    padding-top: 50px;
+  }
+  .informations__list {
+    padding: 0;
+  }
+}
+@media (max-width: 680px) {
+  .informations {
     width: 100%;
-    height: 80px;
-    background-color: rgba(43, 43, 43, 0.5);
-    z-index: 100;
   }
-  .nav__wrapper {
-    position: fixed;
+  .form__new {
     width: 100%;
   }
-  .nav__left a {
-    display: none;
-  }
-  .nav__right li {
-    padding: 5px;
-  }
-  .nav__right__sign {
-    display: none;
-  }
-  .nav__icon:not(.search) {
-    display: none;
-  }
-  .vertical__rule {
-    display: none;
-  }
-  .search {
-    transform: translate(-50px, -5px);
+}
+@media (max-width: 750px) {
+  .header__top h1 {
+    font-size: 32px;
   }
 }
 * {
@@ -1138,11 +1568,16 @@ header {
 }
 .titlePageRooms p {
   padding-bottom: 70px;
-  font-size: small;
+  font-size: 14px;
 }
 .titlePageRooms h1 {
-  font-size: xx-large;
+  font-size: 32px;
   font-family: "Montserrat", sans-serif;
+  padding-top: 150px;
+}
+.titlePageRooms h1 span {
+  color: red;
+  font-size: 32px;
 }
 
 .buttonSectionRooms {
@@ -1151,15 +1586,15 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #222222;
+  background-color: #1B1B1B;
   padding-top: 20px;
 }
 .buttonSectionRooms button {
   width: 160px;
   height: 35px;
-  border-radius: 20px;
+  border-radius: 35px;
   color: #fefefe;
-  background-color: #222222;
+  background-color: #1B1B1B;
   border: 1px solid #fefefe;
   margin-bottom: 15px;
 }
@@ -1168,12 +1603,18 @@ header {
   border: none;
 }
 
-.rooms {
-  background-color: #222222;
+.roomsPage {
+  background-color: #1B1B1B;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 375px));
+  grid-gap: 0.2em;
   grid-auto-rows: 550px;
+  place-content: center;
+  padding-bottom: 40px;
+}
+
+.roomsPage h2:hover {
+  color: #F60B0E;
 }
 
 .backgroundRooms {
@@ -1187,7 +1628,7 @@ header {
 .backgroundRooms h2 {
   margin: 10px 10px 10px 30px;
   color: #fefefe;
-  font-size: large;
+  font-size: 19px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1195,7 +1636,8 @@ header {
   margin: 10px 10px 10px 30px;
 }
 .lockIconRooms .svg-inline--fa {
-  height: 0.9em;
+  height: 1.4em;
+  margin-left: 2px;
 }
 
 .infoRooms {
@@ -1231,11 +1673,27 @@ header {
   margin: 10px;
 }
 
+.rooms_magicImperium:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_theCure {
   background-image: url(../images/gallery/room-2.jpg);
   background-size: cover;
   background-position: center;
   margin: 10px;
+}
+
+.rooms_theCure:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
 }
 
 .rooms_burlesque {
@@ -1245,11 +1703,27 @@ header {
   margin: 10px;
 }
 
+.rooms_burlesque:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_theHospital {
   background-image: url(../images/gallery/room-5.jpg);
   background-size: cover;
   background-position: center;
   margin: 10px;
+}
+
+.rooms_theHospital:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
 }
 
 .rooms_abandonedFactory {
@@ -1259,11 +1733,27 @@ header {
   margin: 10px;
 }
 
+.rooms_abandonedFactory:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_bunker51 {
   background-image: url(../images/gallery/room-7.jpg);
   background-size: cover;
   background-position: center;
   margin: 10px;
+}
+
+.rooms_bunker51:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
 }
 
 .rooms_theMysticalRoom {
@@ -1273,6 +1763,14 @@ header {
   margin: 10px;
 }
 
+.rooms_theMysticalRoom:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_backToTheFutur {
   background-image: url(../images/gallery/room-9.jpg);
   background-size: cover;
@@ -1280,8 +1778,24 @@ header {
   margin: 10px;
 }
 
+.rooms_backToTheFutur:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
+.rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital {
+  display: none;
+}
+
+.selection {
+  display: none;
+}
+
 @media screen and (min-width: 760px) and (max-width: 1023px) {
-  .rooms {
+  .roomsPage {
     grid-template-columns: repeat(4, 180px);
     grid-gap: 0.2em;
     grid-auto-rows: 260px;
@@ -1289,6 +1803,9 @@ header {
     justify-content: center;
   }
   .backgroundRooms h1 {
+    font-size: 44px;
+  }
+  .backgroundRooms h1 span {
     font-size: 44px;
   }
   .backgroundRooms p {
@@ -1320,32 +1837,51 @@ header {
   .lockIconRooms {
     margin: 5px 5px 5px 20px;
   }
+  .lockIconRooms .svg-inline--fa {
+    height: 1em;
+    margin-left: 2px;
+  }
   .infoRooms_people, .infoRooms_clock, .infoRooms_location {
     margin-bottom: 0px !important;
   }
   .infoRooms .svg-inline--fa {
-    margin-top: 6px;
+    margin-top: 2px;
+  }
+  .rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital {
+    display: none;
+  }
+  .selection {
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) {
-  .rooms {
-    grid-template-columns: repeat(4, 320px);
+  .titlePageRooms p {
+    font-size: 25px !important;
+  }
+  .titlePageRooms strong {
+    font-size: 25px;
+  }
+  .roomsPage {
+    grid-template-columns: repeat(4, 250px);
     grid-gap: 0.2em;
-    grid-auto-rows: 400px;
-    padding-bottom: 100px;
+    grid-auto-rows: 370px;
+    padding-bottom: 40px;
     justify-content: center;
   }
-  .rooms p {
+  .roomsPage p {
     font-size: 16px;
   }
   .backgroundRooms h1 {
-    font-size: 120px;
+    font-size: 80px;
+  }
+  .backgroundRooms h1 span {
+    font-size: 80px;
   }
   .backgroundRooms p {
     font-size: 16px;
   }
   .backgroundRooms h2 {
-    font-size: 44px;
+    font-size: 20px;
   }
   .buttonSectionRooms {
     height: 150px;
@@ -1358,6 +1894,157 @@ header {
     width: 100px;
     margin-bottom: 15px;
     margin-right: 15px;
+  }
+  .rooms_addPrisonBreak {
+    display: grid;
+    background-image: url(../images/gallery/room-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addPrisonBreak:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .rooms_addMagicImperium {
+    display: grid;
+    background-image: url(../images/gallery/slide-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addMagicImperium:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .rooms_addBurlesque {
+    display: grid;
+    background-image: url(../images/gallery/room-3.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addBurlesque:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .rooms_addTheHospital {
+    display: grid;
+    background-image: url(../images/gallery/room-5.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addTheHospital:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .selection {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 20px 0px 80px 0px;
+  }
+  .selection__button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    background-color: #1B1B1B;
+    color: #fefefe;
+    text-align: center;
+  }
+  .selection__button:hover {
+    background-color: #F60B0E;
+    border: none;
+  }
+  .selection p {
+    letter-spacing: 5px;
+    transform: translateY(5px);
+    color: #fefefe;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .roomsPage {
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 0.2em;
+    grid-auto-rows: 400px;
+    padding-bottom: 40px;
+    justify-content: center;
+  }
+  .rooms_addPrisonBreak {
+    display: grid;
+    background-image: url(../images/gallery/room-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addMagicImperium {
+    display: grid;
+    background-image: url(../images/gallery/slide-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addBurlesque {
+    display: grid;
+    background-image: url(../images/gallery/room-3.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_adTtheHospital {
+    display: grid;
+    background-image: url(../images/gallery/room-5.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .selection {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 20px 0px 150px 0px;
+  }
+  .selection__button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    background-color: #1B1B1B;
+    color: #fefefe;
+    text-align: center;
+  }
+  .selection__button:hover {
+    background-color: #F60B0E;
+    border: none;
+  }
+  .selection p {
+    letter-spacing: 5px;
+    transform: translateY(5px);
+    color: #fefefe;
   }
 }
 * {
@@ -1415,7 +2102,7 @@ footer {
 }
 
 .endFooter_usefulLinks {
-  margin: 15px 0px 20px 20px;
+  margin: 15px 0px 20px 26px;
 }
 .endFooter_usefulLinks ul {
   padding: 0px;
@@ -1428,6 +2115,10 @@ footer {
 .endFooter_usefulLinks a {
   text-decoration: none;
   color: #717171;
+}
+
+.endFooter_usefulLinks a:hover {
+  color: #F60B0E;
 }
 
 .endFooter_working {
@@ -1457,6 +2148,10 @@ footer {
   padding: 10px;
   margin-right: 5px;
   margin-top: 15px;
+}
+
+.endFooter_socialLinks .svg-inline--fa:hover {
+  background-color: #F60B0E;
 }
 
 .endFooter_end {
@@ -1494,6 +2189,32 @@ footer {
 @media screen and (min-width: 1024px) {
   .endFooter {
     justify-content: space-around;
+    margin: 30px 30px 0px 30px;
+  }
+  .endFooter a {
+    font-size: 14px;
+  }
+  .endFooter p {
+    font-size: 14px;
+  }
+  .endFooter_working_hours_day {
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .endFooter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 200px 0px 200px;
+  }
+  .endFooter a {
+    font-size: 18px;
+  }
+  .endFooter p {
+    font-size: 18px;
+  }
+  .endFooter_working_hours_day {
+    padding-right: 30px;
   }
 }
 h5 {
@@ -1501,9 +2222,502 @@ h5 {
   padding-top: 30px;
 }
 
+.blog__descriptionNew {
+  padding-top: 15px;
+  padding-left: 15px;
+  font-size: 12px;
+  color: #717171;
+  position: relative;
+}
+.blog__descriptionNew::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #717171;
+  top: 150%;
+  left: auto;
+}
+.blog__btn {
+  padding: 10px 30px;
+  border-radius: 25px;
+  background-color: #292929;
+  color: white;
+  font-weight: 600;
+  border: 1px solid #717171;
+  margin: 50px;
+  margin-left: 15px;
+}
 .blog__card--box {
   background-color: #292929;
   box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.grid__Instagram {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20% 20%;
+  align-content: center;
+  gap: 10px;
+  padding: 10%;
+}
+
+.img__Instagram {
+  width: 100%;
+}
+
+.Archives {
+  text-align: left;
+  margin: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags__btn {
+  padding: 5px 15px;
+  border-radius: 25px;
+  background-color: #1d1d1d;
+  color: white;
+  font-weight: 600;
+  border: 3px solid #717171;
+  margin: 5px;
+}
+
+.selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+  padding: 20px 0;
+}
+.selection__button {
+  display: block;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border: 1px solid #717171;
+  border-radius: 50%;
+  background-color: #1B1B1B;
+  color: #717171;
+  text-align: center;
+}
+.selection__button:hover {
+  background-color: #F60B0E;
+}
+.selection a {
+  color: white;
+}
+.selection p {
+  letter-spacing: 5px;
+  transform: translateY(5px);
+}
+
+@media (max-width: 769px) {
+  .selection__button--ten {
+    display: none;
+  }
+  .selection p {
+    display: none;
+  }
+}
+.Section {
+  text-align: left;
+}
+.Section__Title {
+  font-size: 44px;
+  padding-top: 200px;
+  padding-bottom: 25px;
+  position: relative;
+  padding-top: 15px;
+  padding-left: 15px;
+  font-size: 12px;
+  color: white;
+  position: relative;
+}
+.Section__Title::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: #717171;
+  top: 94%;
+  left: 3%;
+}
+.Section__puce {
+  color: #292929;
+}
+
+* {
+  font-family: "Hind", sans-serif;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.theCure_titlePage {
+  background-color: #1B1B1B;
+}
+
+.theCure_generalInfo {
+  background-color: #1B1B1B;
+}
+
+.theCure_generalInfo_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 30px 45px 15px 20px;
+}
+.theCure_generalInfo_head p {
+  color: #fefefe;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.theCure_generalInfo_difficulty_lockIcon {
+  margin: 10px;
+}
+.theCure_generalInfo_difficulty_lockIcon .svg-inline--fa {
+  height: 1.2em;
+  margin-left: 2px;
+}
+
+.theCure_generalInfo_players_icon, .theCure_generalInfo_minutes_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.theCure_generalInfo_players_icon p, .theCure_generalInfo_minutes_icon p {
+  color: gray;
+  margin-left: 10px;
+}
+
+.theCure_generalInfo_players, .theCure_generalInfo_minutes {
+  border-left: 1px solid gray;
+  padding-left: 20px;
+}
+
+.theCure_generalInfo_text {
+  color: gray;
+  margin: 20px 20px 10px 20px;
+}
+
+.theCure_generalInfo_phone {
+  display: flex;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.theCure_generalInfo_phone p {
+  margin-left: 20px;
+  color: #fefefe;
+}
+
+.theCure_generalInfo_email {
+  display: flex;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.theCure_generalInfo_email p {
+  margin-left: 20px;
+  color: #fefefe;
+}
+
+.theCure_generalInfo_skype {
+  display: flex;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.theCure_generalInfo_skype p {
+  margin-left: 20px;
+  color: #fefefe;
+}
+
+.theCure_generalInfo_location {
+  display: flex;
+  margin: 20px 20px 10px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.theCure_generalInfo_location p {
+  margin-left: 20px;
+  color: gray;
+}
+
+.theCure_generalInfo_bookingButton {
+  color: #fefefe;
+  background-color: #F60B0E;
+  border: none;
+  padding: 12px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 35px;
+  margin: 20px 20px 40px 20px;
+}
+
+.theCure_generalInfo_bookingButton:hover {
+  opacity: 0.7;
+  transition: ease-in 0.2s;
+}
+
+.theCure_otherRooms {
+  background-color: #1B1B1B;
+  width: auto;
+  height: 100%;
+  padding-bottom: 100px;
+}
+.theCure_otherRooms h2 {
+  font-size: 28px;
+  margin: 0px 0px 8px 20px;
+  font-weight: 700;
+  color: #fefefe;
+}
+.theCure_otherRooms .theCure_otherRooms_selection h3:hover {
+  color: #F60B0E;
+}
+.theCure_otherRooms .rooms_theMysticalRoom {
+  width: auto;
+  height: 370px;
+  margin: 20px;
+  color: #fefefe;
+}
+.theCure_otherRooms .rooms_theMysticalRoom h3 {
+  margin-left: 30px;
+  font-size: 16px;
+}
+.theCure_otherRooms .rooms_bunker51 {
+  display: none;
+  width: auto;
+  height: 370px;
+  margin: 20px;
+  color: #fefefe;
+}
+.theCure_otherRooms .rooms_bunker51 h3 {
+  margin-left: 30px;
+  font-size: 16px;
+}
+.theCure_otherRooms .rooms_backToTheFutur {
+  display: none;
+  width: auto;
+  height: 370px;
+  margin: 20px;
+  color: #fefefe;
+}
+.theCure_otherRooms .rooms_backToTheFutur h3 {
+  margin-left: 30px;
+  font-size: 16px;
+}
+.theCure_otherRooms .selection_theCureRoom {
+  display: none;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 45px;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom .selection__button {
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding-top: 5px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    background-color: #1B1B1B;
+    color: #fefefe;
+    text-align: center;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom .selection__button:hover {
+    background-color: #F60B0E;
+    border: none;
+  }
+  .theCure_otherRooms h2 {
+    margin-left: 40px;
+    padding-top: 100px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-gap: 0.2em;
+    grid-auto-rows: minmax(250px, 1fr);
+    margin: 0px 30px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_theMysticalRoom {
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_theMysticalRoom h3 {
+    margin-left: 20px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_bunker51 {
+    display: block;
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_bunker51 h3 {
+    margin-left: 20px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_backToTheFutur {
+    display: block;
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_backToTheFutur h3 {
+    margin-left: 20px;
+  }
+  .theCure_generalInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 25px;
+  }
+  .theCure_generalInfo_inside {
+    display: flex;
+    flex-direction: column;
+  }
+  .theCure_generalInfo_footer {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 90px;
+  }
+  .theCure_generalInfo_players, .theCure_generalInfo_minutes {
+    padding-left: 40px;
+  }
+  .theCure_otherRooms h2 {
+    margin-left: 90px;
+    padding-top: 100px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-gap: 0.2em;
+    grid-auto-rows: minmax(250px, 1fr);
+    margin: 0px 75px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_theMysticalRoom {
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_theMysticalRoom h3 {
+    margin-left: 30px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_bunker51 {
+    display: block;
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_bunker51 h3 {
+    margin-left: 30px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_backToTheFutur {
+    display: block;
+    height: auto;
+    margin: 10px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection .rooms_backToTheFutur h3 {
+    margin-left: 30px;
+  }
+  .theCure_generalInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 70px;
+  }
+  .theCure_generalInfo_text {
+    color: gray;
+    margin: 20px 20px 10px 50px;
+    font-size: 18px;
+  }
+  .theCure_generalInfo_head p {
+    font-size: 16px;
+  }
+  .theCure_generalInfo_inside {
+    display: flex;
+    flex-direction: column;
+  }
+  .theCure_generalInfo_footer {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 410px;
+  }
+  .theCure_generalInfo {
+    padding: 100px 450px;
+  }
+  .theCure_generalInfo_players, .theCure_generalInfo_minutes {
+    padding-left: 70px;
+  }
+  .theCure_otherRooms .theCure_otherRooms_selection {
+    margin: 0px 400px;
+    grid-auto-rows: minmax(250px, 330px);
+  }
+  .theCure_otherRooms h2 {
+    margin-left: 410px;
+  }
+  .theCure_generalInfo_text {
+    font-size: 22px;
+  }
+  .theCure_generalInfo_head p {
+    font-size: 16px;
+  }
+  .theCure_generalInfo_footer p {
+    font-size: 18px;
+  }
 }
 
 .grid__Instagram {

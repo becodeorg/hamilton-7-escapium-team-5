@@ -48,7 +48,7 @@ footer{
     line-height: 20px;
 }
 .endFooter_usefulLinks{
-    margin: 15px 0px 20px 20px;
+    margin: 15px 0px 20px 26px;
     ul{
         padding: 0px;
     }
@@ -61,6 +61,9 @@ footer{
         text-decoration: none;
         color: #717171;
     }
+}
+.endFooter_usefulLinks a:hover{
+    color: #F60B0E;
 }
 
 .endFooter_working{
@@ -89,6 +92,9 @@ footer{
         margin-right: 5px;
         margin-top: 15px;
     }
+}
+.endFooter_socialLinks .svg-inline--fa:hover{
+    background-color: #F60B0E;
 }
 .endFooter_end{
     display: flex;
@@ -137,5 +143,32 @@ footer{
 @media screen and (min-width: 1024px) {
     .endFooter{
         justify-content: space-around;
+        margin: 30px 30px 0px 30px;
+        a{
+            font-size: 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    .endFooter_working_hours_day{
+        padding-right: 15px;
+    }
+}
+//screen laptop min 1920px
+@media screen and (min-width: 1920px){
+    .endFooter {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 200px 0px 200px;
+        a{
+            font-size: 18px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    .endFooter_working_hours_day{
+        padding-right: 30px;
     }
 }

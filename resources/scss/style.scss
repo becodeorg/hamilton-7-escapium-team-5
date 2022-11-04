@@ -1,7 +1,10 @@
 @forward 'base/reset';
-@forward 'pages/homepage';
 @forward 'components/navbar';
-@forward './rooms.scss';
-@forward './footer.scss' ;
-@forward '../scss/base/typographie';
-@forward 'Blog'
+@forward 'pages/homepage';
+@forward 'pages/about';
+@forward 'pages/contact';
+@forward './rooms';
+@forward './footer' ;
+@forward 'base/typographie';
+@forward 'Blog';
+@forward './singleRoom.scss';

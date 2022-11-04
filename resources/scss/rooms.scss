@@ -14,11 +14,16 @@
     }
     p{
         padding-bottom: 70px;
-        font-size: small;
+        font-size: 14px;
     }
     h1{
-        font-size: xx-large;
+        font-size: 32px;
         font-family: t.$font__heading;
+        padding-top: 150px;
+        span {
+            color: red;
+            font-size: 32px;
+        }
     }
 }
 .buttonSectionRooms{
@@ -27,14 +32,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color:  #222222;
+    background-color:  #1B1B1B;
     padding-top: 20px;
     button{
         width: 160px;
         height: 35px;
-        border-radius: 20px;
+        border-radius: 35px;
         color: #fefefe;
-        background-color:  #222222;
+        background-color:  #1B1B1B;
         border: 1px solid #fefefe;
         margin-bottom: 15px;
     }
@@ -44,12 +49,17 @@
     }
 }
 
-.rooms{
-    background-color:  #222222;
+.roomsPage{
+    background-color:  #1B1B1B;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); 
-    grid-gap: 1em;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 375px)); 
+    grid-gap: 0.2em;
     grid-auto-rows: 550px;
+    place-content: center;
+    padding-bottom: 40px;
+}
+.roomsPage h2:hover{
+    color: #F60B0E;
 }
 .backgroundRooms{
     backdrop-filter: brightness(0.4);
@@ -61,14 +71,15 @@
     h2{
         margin: 10px 10px 10px 30px;
         color: #fefefe;
-        font-size: large;
+        font-size: 19px;
         font-family: t.$font__heading;
     }
 }
 .lockIconRooms{
     margin: 10px 10px 10px 30px;
     .svg-inline--fa{
-        height: 0.9em;
+        height: 1.4em;
+        margin-left: 2px;
     }
 }
 
@@ -103,11 +114,25 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_magicImperium:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_theCure{
     background-image: url(../images/gallery/room-2.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
+}
+.rooms_theCure:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
 }
 .rooms_burlesque{
     background-image: url(../images/gallery/room-3.jpg);
@@ -115,11 +140,25 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_burlesque:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_theHospital{
     background-image: url(../images/gallery/room-5.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
+}
+.rooms_theHospital:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
 }
 .rooms_abandonedFactory{
     background-image: url(../images/gallery/gallery-1.jpg);
@@ -127,11 +166,25 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_abandonedFactory:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_bunker51{
     background-image: url(../images/gallery/room-7.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
+}
+.rooms_bunker51:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
 }
 .rooms_theMysticalRoom{
     background-image: url(../images/gallery/room-8.jpg);
@@ -139,11 +192,31 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_theMysticalRoom:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_backToTheFutur{
     background-image: url(../images/gallery/room-9.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
+}
+.rooms_backToTheFutur:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
+.rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital{
+    display: none;
+}
+.selection{
+    display: none;
 }
 
 
@@ -151,7 +224,7 @@
 
 //screen tablet 768px
 @media screen and (min-width:760px) and (max-width:1023px){
-    .rooms{
+    .roomsPage{
         grid-template-columns: repeat(4, 180px);
         grid-gap: 0.2em;
         grid-auto-rows: 260px;
@@ -161,6 +234,9 @@
     .backgroundRooms {
         h1{
             font-size: 44px;
+            span{
+                font-size: 44px;
+            }
         }
         p{
             font-size: 12px ;
@@ -191,35 +267,56 @@
     }
     .lockIconRooms{
         margin: 5px 5px 5px 20px;
+        .svg-inline--fa {
+            height: 1em;
+            margin-left: 2px;
+            }
     }
     .infoRooms_people, .infoRooms_clock, .infoRooms_location{
         margin-bottom: 0px !important;
     }
     .infoRooms .svg-inline--fa {
-        margin-top: 6px;
+        margin-top: 2px;
+    }
+    .rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital{
+        display: none;
+    }
+    .selection{
+        display: none;
     }
 }
 //screen laptop min 1024px
 @media screen and (min-width: 1024px) {
-    .rooms{
+    .titlePageRooms{
+        p{
+            font-size: 25px !important;
+        }
+        strong{
+            font-size: 25px;
+        }
+    }
+    .roomsPage{
         p{
         font-size: 16px ;
         }
-        grid-template-columns: repeat(4, 320px);
+        grid-template-columns: repeat(4, 250px);
         grid-gap: 0.2em;
-        grid-auto-rows: 400px;
-        padding-bottom: 100px;
+        grid-auto-rows: 370px;
+        padding-bottom: 40px;
         justify-content: center;
         }
     .backgroundRooms {
         h1{
-            font-size: 120px;
+            font-size: 80px;
+            span{
+                font-size: 80px;
+            }
         }
         p{
             font-size: 16px ;
         }
         h2{
-            font-size: 44px;
+            font-size: 20px;
         }
     }
     .buttonSectionRooms{
@@ -233,5 +330,155 @@
             margin-bottom: 15px;
             margin-right: 15px;
         }
+    }
+    .rooms_addPrisonBreak{
+        display: grid;
+        background-image: url(../images/gallery/room-2.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .rooms_addPrisonBreak:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
+    }
+    .rooms_addMagicImperium{
+        display: grid;
+        background-image: url(../images/gallery/slide-2.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .rooms_addMagicImperium:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
+    }
+    .rooms_addBurlesque{
+        display: grid;
+        background-image: url(../images/gallery/room-3.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .rooms_addBurlesque:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
+    }
+    .rooms_addTheHospital{
+        display: grid;
+        background-image: url(../images/gallery/room-5.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .rooms_addTheHospital:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
+    }
+    .selection {
+        background-color: #1B1B1B;     
+        display: flex;     
+        justify-content: center;     
+        align-items: center;     
+        list-style: none;     
+        gap: 15px;    
+        padding: 20px 0px 80px 0px;    
+        &__button {         
+            display: block;         
+            height: 40px;         
+            width: 40px;         
+            padding: 10px;         
+            border: 1px solid #717171;         border-radius: 50%;         background-color:#1B1B1B;         color: #fefefe;         
+            text-align: center;          
+            &:hover {             
+                background-color: #F60B0E;
+                border: none;         
+            }    
+        }     
+        p {         
+            letter-spacing: 5px;         
+            transform: translateY(5px);
+            color: #fefefe;     
+        } 
+    }
+}
+
+//screen laptop min 1920px
+@media screen and (min-width: 1920px){
+    .roomsPage {
+        grid-template-columns: repeat(4, 300px);
+        grid-gap: 0.2em;
+        grid-auto-rows: 400px;
+        padding-bottom: 40px;
+        justify-content: center;
+    }
+    .rooms_addPrisonBreak{
+        display: grid;
+        background-image: url(../images/gallery/room-2.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .rooms_addMagicImperium{
+        display: grid;
+        background-image: url(../images/gallery/slide-2.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .rooms_addBurlesque{
+        display: grid;
+        background-image: url(../images/gallery/room-3.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .rooms_adTtheHospital{
+        display: grid;
+        background-image: url(../images/gallery/room-5.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+    .selection {
+        background-color: #1B1B1B;     
+        display: flex;     
+        justify-content: center;     
+        align-items: center;     
+        list-style: none;     
+        gap: 15px;    
+        padding: 20px 0px 150px 0px;      
+        &__button {         
+            display: block;         
+            height: 40px;         
+            width: 40px;         
+            padding: 10px;         
+            border: 1px solid #717171;
+            border-radius: 50%;         
+            background-color:#1B1B1B;         
+            color: #fefefe;         
+            text-align: center;          
+            &:hover {             
+                background-color: #F60B0E;
+                border: none;         
+            }    
+        }     
+        p {         
+            letter-spacing: 5px;         
+            transform: translateY(5px);
+            color: #fefefe;     
+        } 
     }
 }

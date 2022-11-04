@@ -1,3 +1,11 @@
+@keyframes fromLeft {
+    from {
+        transform: translateX(-500px)}
+    to {
+        transform: translateX(0)
+    }
+}
+
 .nav {
     background-color: #222222;
     ul {
@@ -33,6 +41,7 @@
         display: none;
         z-index: 5;
         background-color: #222222;
+        animation: fromLeft .4s;
         ul {
             list-style: none;
             margin: 0;
@@ -142,23 +151,24 @@
         line-height: 5px;
         color: white;
     }
-
 }
 
 .close {
-    &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    &:nth-child(2) {
-        opacity: 0;
-    }
-
-    &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
+        span {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(8px);
+            }
+        
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(6px);
+            }
+        }
+    
 }
-
 
 @media (max-width: 1245px) {
     .nav__btn {
@@ -173,7 +183,7 @@
     .nav__left {
         li {
             a {
-                padding: 10px;
+                padding: 25px 10px;
             }
         }
     }

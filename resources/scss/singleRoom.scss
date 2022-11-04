@@ -1,0 +1,372 @@
+@use '../scss/base/typographie' as t;
+*{
+    font-family: t.$font_paragraphs;
+}
+h2{
+    font-family: t.$font__heading;
+    font-size: 20px;
+    font-weight: 700;
+}
+.theCure_titlePage{
+    background-color: #1B1B1B;
+}
+.theCure_generalInfo{
+    background-color: #1B1B1B;
+}
+.theCure_generalInfo_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 30px 45px 15px 20px;
+    p{
+        color: #fefefe;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 12px;
+        font-size: 12px;
+    }
+}
+.theCure_generalInfo_difficulty_lockIcon{
+    margin: 10px;
+    .svg-inline--fa{
+        height: 1.2em;
+        margin-left: 2px;
+    }
+}
+.theCure_generalInfo_players_icon, .theCure_generalInfo_minutes_icon{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    p{
+        color: gray;
+        margin-left: 10px;
+    }
+}
+.theCure_generalInfo_players, .theCure_generalInfo_minutes{
+    border-left: 1px solid gray;
+    padding-left: 20px;
+}
+.theCure_generalInfo_text{
+    color: gray;
+    margin: 20px 20px 10px 20px;
+}
+.theCure_generalInfo_phone{
+    display: flex;
+    margin: 20px 20px 10px 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    p{
+        margin-left: 20px;
+        color: #fefefe;
+    }
+}
+.theCure_generalInfo_email{
+    display: flex;
+    margin: 20px 20px 10px 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    p{
+        margin-left: 20px;
+        color: #fefefe;
+    }
+}
+.theCure_generalInfo_skype{
+    display: flex;
+    margin: 20px 20px 10px 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    p{
+        margin-left: 20px;
+        color: #fefefe;
+    }
+}
+.theCure_generalInfo_location{
+    display: flex;
+    margin: 20px 20px 10px 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    p{
+        margin-left: 20px;
+        color: gray;
+    }
+}
+.theCure_generalInfo_bookingButton{
+    color: #fefefe;
+    background-color: #F60B0E;
+    border: none;
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 35px;
+    margin: 20px 20px 40px 20px;
+}
+.theCure_generalInfo_bookingButton:hover {
+    opacity: .7;
+    transition: ease-in .2s;
+}
+// .theCure_bookingForm{
+//     background-color: #1B1B1B;
+//     h2{
+//         color: #fefefe;
+//         text-align: center;
+//         padding-top: 40px;
+//         padding-bottom: 40px;
+//     }
+// }
+.theCure_otherRooms{
+    background-color: #1B1B1B;
+    width: auto;
+    height: 100%;
+    padding-bottom: 100px;
+    h2{
+        font-size: 28px;
+        margin: 0px 0px 8px 20px;
+        font-weight: 700;
+        color: #fefefe;
+    }
+    .theCure_otherRooms_selection h3:hover{
+        color: #F60B0E;
+    }
+    .rooms_theMysticalRoom{
+        width: auto;
+        height: 370px;
+        margin: 20px;
+        color: #fefefe;
+        h3{
+            margin-left: 30px;
+            font-size: 16px;
+        }
+    }
+    .rooms_bunker51{
+        display: none;
+        width: auto;
+        height: 370px;
+        margin: 20px;
+        color: #fefefe;
+        h3{
+            margin-left: 30px;
+            font-size: 16px;
+        }
+    }
+    .rooms_backToTheFutur{
+        display: none;
+        width: auto;
+        height: 370px;
+        margin: 20px;
+        color: #fefefe;
+        h3{
+            margin-left: 30px;
+            font-size: 16px;
+        }
+    }
+    .selection_theCureRoom{
+        display: none;
+    }
+}
+
+//screen tablet 768px
+@media screen and (min-width:760px) and (max-width:1023px){
+    .theCure_otherRooms_titleButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .selection_theCureRoom{
+            background-color: #1B1B1B;   
+            display: flex;     
+            justify-content: center;     
+            align-items: center;     
+            list-style: none;     
+            gap: 15px;    
+            padding: 100px 0px 0px 0px; 
+            margin-right: 45px;
+            .selection__button {         
+                display: block;         
+                height: 30px;         
+                width: 30px;         
+                padding-top: 5px;         
+                border: 1px solid #717171;         
+                border-radius: 50%;         
+                background-color:#1B1B1B;         
+                color: #fefefe;         
+                text-align: center;          
+                &:hover {             
+                    background-color: #F60B0E;
+                    border: none;         
+                }    
+            }     
+        }
+    }
+    // .theCure_generalInfo_players, .theCure_generalInfo_minutes{
+    //     padding-left: 40px;
+    // }
+    .theCure_otherRooms{
+        h2{
+        margin-left: 40px;
+        padding-top: 100px;
+        }
+        .theCure_otherRooms_selection{
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(225px, 1fr)); 
+        grid-gap: 0.2em;
+        grid-auto-rows: minmax(250px, 1fr);
+        margin: 0px 30px;
+            .rooms_theMysticalRoom {
+                height: auto;
+                margin: 10px;
+                h3{
+                    margin-left: 20px;
+                }
+            }
+            .rooms_bunker51{
+                display: block;
+                height: auto;
+                margin: 10px;
+                h3{
+                    margin-left: 20px;
+                }
+            }
+            .rooms_backToTheFutur{
+                display: block;
+                height: auto;
+                margin: 10px;
+                h3{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .theCure_generalInfo{
+        display: flex;
+        flex-direction: row;
+        padding: 0px 25px;
+    }
+    .theCure_generalInfo_inside{
+        display: flex;
+        flex-direction: column;
+    }
+    .theCure_generalInfo_footer{
+        margin-top: 20px;
+    }
+}
+
+//screen laptop min 1024px
+@media screen and (min-width: 1024px) {  
+.theCure_otherRooms_titleButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .selection_theCureRoom{
+        background-color: #1B1B1B;   
+        display: flex;     
+        justify-content: center;     
+        align-items: center;     
+        list-style: none;     
+        gap: 15px;    
+        padding: 100px 0px 0px 0px; 
+        margin-right: 90px;
+    }
+}
+.theCure_generalInfo_players, .theCure_generalInfo_minutes{
+    padding-left: 40px;
+}
+.theCure_otherRooms{
+    h2{
+    margin-left: 90px;
+    padding-top: 100px;
+    }
+    .theCure_otherRooms_selection{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(225px, 1fr)); 
+    grid-gap: 0.2em;
+    grid-auto-rows: minmax(250px, 1fr);
+    margin: 0px 75px;
+    
+        .rooms_theMysticalRoom {
+            height: auto;
+            margin: 10px;
+            h3{
+                margin-left: 30px;
+            }
+        }
+        .rooms_bunker51{
+            display: block;
+            height: auto;
+            margin: 10px;
+            h3{
+                margin-left: 30px;
+            }
+        }
+        .rooms_backToTheFutur{
+            display: block;
+            height: auto;
+            margin: 10px;
+            h3{
+                margin-left: 30px;
+            }
+        }
+    }
+}
+.theCure_generalInfo{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 70px;
+}
+.theCure_generalInfo_text{
+    color: gray;
+    margin: 20px 20px 10px 50px;
+    font-size: 18px;
+}
+.theCure_generalInfo_head p {
+    font-size: 16px;
+}
+.theCure_generalInfo_inside{
+    display: flex;
+    flex-direction: column;
+}
+.theCure_generalInfo_footer{
+    margin-top: 20px;
+}
+}
+//screen laptop min 1920px
+@media screen and (min-width: 1920px) { 
+    .theCure_otherRooms_titleButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .selection_theCureRoom{
+            background-color: #1B1B1B;   
+            display: flex;     
+            justify-content: center;     
+            align-items: center;     
+            list-style: none;     
+            gap: 15px;    
+            padding: 100px 0px 0px 0px; 
+            margin-right: 410px;
+        }
+    }
+    .theCure_generalInfo {
+        padding:100px 450px;
+    }
+    .theCure_generalInfo_players, .theCure_generalInfo_minutes{
+        padding-left: 70px;
+    }
+    .theCure_otherRooms .theCure_otherRooms_selection{
+        margin: 0px 400px;
+        grid-auto-rows: minmax(250px, 330px);
+    }
+    .theCure_otherRooms h2 {
+        margin-left: 410px;
+    }
+    .theCure_generalInfo_text{
+        font-size: 22px;
+    }
+    .theCure_generalInfo_head p {
+        font-size: 16px;
+    }
+    .theCure_generalInfo_footer p{
+        font-size: 18px;
+    }
+} 
