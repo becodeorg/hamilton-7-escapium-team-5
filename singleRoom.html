@@ -4,53 +4,297 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c73011fb05.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <title>The Cure</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav class="nav">
+            <div class="nav__wrapper">
+                <ul class="nav__left">
+                    <li><img src="./resources/images/logo/logo.png" alt="" class="nav__logo"></li>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="">features</a></li>
+                    <li><a href="rooms.html">rooms</a></li>
+                    <li><a href="contact.html">booking</a></li>
+                    <li><a href="blogs.html">blog</a></li>
+                    <li><a href="contact.html">contacts</a></li>
+                </ul>
+                <ul class="nav__right">
+                    <li><a href="" class="nav__btn right">Book Now!</a></li>
+                    <li><img src="./resources/images/logo/search.svg" alt="" class="nav__icon search"></li>
+                    <li class="vertical__rule">|</li>
+                    <li><img src="./resources/images/logo/solo-people.svg" alt="" class="nav__icon"></li>
+                    <li><a href="#" class="nav__right__sign right">Sign In</a></li>
+                    <div class="hamburger" id="hamburger">
+                        <span>&#8213;</span>
+                        <span>&#8213;</span>
+                        <span>&#8213;</span>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="nav__mobile" id="nav__mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="about.html">About</a></li>
+                <hr>
+                <li><a href="">Features</a></li>
+                <hr>
+                <li><a href="rooms.html">Rooms</a></li>
+                <hr>
+                <li><a href="contact.html">Booking</a></li>
+                <hr>
+                <li><a href="blogs.html">Blog</a></li>
+                <hr>
+                <li><a href="contact.html">Contacts</a></li>
+                <hr>
+                <li>
+                    <img src="./resources/images/logo/solo-people.svg" alt="" class="nav__mobile__icon">
+                    <a href="#" class="nav__mobile__sign">Sign In</a>
+                </li>
+                <hr>
+            </ul>
+        </div>
+    </header>
     <main>
+        <section class="theCure_titlePage">
+            <div class="carousel switchCarousel" id="carousel">
+                <div class="left">
+                    <h1 class="transitionIn" id="title__first-p">The Cure</h1>
+                </div>
+                <div class="right">
+                        <span id="carousel__btn-one">&#8213;</span>
+                        <span id="carousel__btn-two">&#8213;</span>
+                        <span id="carousel__btn-three">&#8213;</span>
+                        <span id="carousel__btn-four">&#8213;</span>
+                </div>
+            </div>
+        </section>
 <!-- general information section -->
-        <section class="generalInfo">
-            <div class="difficulty">
-                <div class="difficulty_lockIcon">
-                    <i class="fa-solid fa-lock" style="color:red"></i>
-                    <i class="fa-solid fa-lock" style="color:red"></i>
-                    <i class="fa-solid fa-lock" style="color:red"></i>
-                    <i class="fa-solid fa-lock" style="color:red"></i>
-                    <i class="fa-solid fa-lock" style="color:gray"></i>
+        <section class="theCure_generalInfo">
+            <div class="theCure_generalInfo_inside">
+            <div class="theCure_generalInfo_head">
+                <div class="theCure_generalInfo_difficulty">
+                    <div class="theCure_generalInfo_difficulty_lockIcon">
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:gray"></i>
+                    </div>
+                    <p>Difficulty</p>
                 </div>
-                <p>Difficulty</p>
-            </div>
-            <div class="players">   
-                <div class="players_icon">
-                    <i class="fa-duotone fa-user-group"></i>
-                    <p>2-3</p>
+                <div class="theCure_generalInfo_players">   
+                    <div class="theCure_generalInfo_players_icon">
+                        <i class="fa-solid fa-user-group" style="color:gray"></i>
+                        <p>2-3</p>
+                    </div>
+                    <p>Players</p>
                 </div>
-                <p>Players</p>
-            </div>
-            <div class="minutes">   
-                <div class="minutes_icon">
-                    <i class="fa-light fa-clock"></i>
-                    <p>60</p>
+                <div class="theCure_generalInfo_minutes">   
+                    <div class="theCure_generalInfo_minutes_icon">
+                        <i class="fa-regular fa-clock" style="color:gray"></i>
+                        <p>60</p>
+                    </div>
+                    <p>Minutes</p>
                 </div>
-                <p>Minutes</p>
             </div>
 <!-- 3 paragraph description -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
-            <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim.</p>
-            <p>Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
-            
-
+                <p class="theCure_generalInfo_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.<br><br>
+                Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim.<br><br>
+                Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+            </div>
+            <div class="theCure_generalInfo_footer">
+                <div class="theCure_generalInfo_phone">
+                    <i class="fa-solid fa-phone-flip" style="color:#fefefe"></i>
+                    <p>+1 800 900 1248</p>
+                </div>
+                <div    class="theCure_generalInfo_email">
+                    <i class="fa-solid fa-envelope" style="color:#fefefe"></i>
+                    <p>SUPPORT@ESCAPIUM.COM</p>
+                </div>
+                <div class="theCure_generalInfo_skype">
+                    <i class="fa-brands fa-skype" style="color:#fefefe"></i>
+                    <p>ESCAPIUM</p>
+                </div>
+                <div class="theCure_generalInfo_location">
+                    <i class="fa-solid fa-location-dot" style="color:#fefefe"></i>
+                    <p>LA 20198</p>
+                </div>
+                <div >
+                    <button class="theCure_generalInfo_bookingButton">Booking Now!</button>
+                </div>
+            </div>
         </section>
 <!-- booking section -->
-        <section class="bookingForm">
-
-        </section>
+        <!-- <section class="theCure_bookingForm">
+            <h2>Booking Form</h2>
+        </section> -->
 <!-- other rooms section -->
-        <section class="otherRooms">
-
+        <section class="theCure_otherRooms">
+            <h2>Other Rooms</h2>
+            <div class="theCure_otherRooms_selection">
+                <article class="rooms_theMysticalRoom">
+                    <div class="backgroundRooms">
+                        <div class="lockIconRooms">
+                            <i class="fa-solid fa-lock" style="color:red"></i>
+                            <i class="fa-solid fa-lock" style="color:red"></i>
+                            <i class="fa-solid fa-lock" style="color:gray"></i>
+                            <i class="fa-solid fa-lock" style="color:gray"></i>
+                            <i class="fa-solid fa-lock" style="color:gray"></i>
+                        </div>
+                        <h3>The Mystical Room</h3>
+                        <div class="infoRooms">
+                            <div class="infoRooms_people">
+                                <i class="fa-solid fa-user-group"></i>
+                                <p>2-3</p>
+                            </div>
+                        <div class="infoRooms_clock">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>60</p>
+                        </div>
+                        <div class="infoRooms_location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>LA 20198</p>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="rooms_bunker51">
+                    <div class="backgroundRooms">
+                    <div class="lockIconRooms">
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:gray"></i>
+                    </div>
+                    <h3>Bunker 51</h3>
+                    <div class="infoRooms">
+                        <div class="infoRooms_people">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>4-6</p>
+                        </div>
+                        <div class="infoRooms_clock">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>60</p>
+                        </div>
+                        <div class="infoRooms_location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>NY 3031</p>
+                        </div>
+                    </div>
+                    </div>
+                </article>
+                <article class="rooms_backToTheFutur">
+                    <div class="backgroundRooms">
+                    <div class="lockIconRooms">
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:red"></i>
+                        <i class="fa-solid fa-lock" style="color:gray"></i>
+                        <i class="fa-solid fa-lock" style="color:gray"></i>
+                    </div>
+                    <h3>Back To The Futur</h3>
+                    <div class="infoRooms">
+                        <div class="infoRooms_people">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>3-4</p>
+                        </div>
+                        <div class="infoRooms_clock">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>60</p>
+                        </div>
+                        <div class="infoRooms_location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>NY 3031</p>
+                        </div>
+                    </div>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="backgroundFooter">    <!-- all footer div -->
+            <div class="endFooter">       <!-- div -> 4div info -->
+        <!-- section 1 address -->
+                <div class="sectionFooter">
+                    <div class="numberFooter"><p>01</p><hr></div>
+                    <div class="endFooter_address">
+                        <h4>Our Address</h4>
+                        <p>Escape Room Ltd.<br>2390 RoadHill St. Suite 100<br>North Downtown, NY 82153</p><br>
+                        <p>Email:<div class="emailFooter">info@escapium.com</div></p>
+                        <p>Tel: +1 800 900 1248</p>
+                    </div>
+                </div>
+        <!-- section 2 links -->
+                <div class="sectionFooter">
+                    <div class="numberFooter"><p>02</p><hr></div>
+                    <nav class="endFooter_usefulLinks">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Plan an Event</a></li>
+                            <li><a href="#">Pricing packages</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        <!-- section 3 opening hours -->
+                <div class="sectionFooter">
+                    <div class="numberFooter"><p>03</p><hr></div>
+                    <div class="endFooter_working">
+                        <h4>Working Hours</h4>
+                        <div class="endFooter_working_hours">
+                            <div class="endFooter_working_hours_day">
+                                <p>Monday:</p>
+                                <p>Tuesday:</p>
+                                <p id="wednesdayFooter">Wednesday:</p>
+                                <p>Thursday:</p>
+                                <p>Friday:</p>
+                                <p>Saturday:</p>
+                                <p>Sonday:</p>
+                            </div>
+                            <div class="endFooter_working_hours_time">
+                                <p>6pm - 11pm</p>
+                                <p>5pm - 11pm</p>
+                                <p>Closed</p>
+                                <p>6pm - 11pm</p>
+                                <p>2pm - 11pm</p>
+                                <p>11am - 11pm</p>
+                                <p>11am - 9pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!-- section 4 social links -->
+                <div class="sectionFooter">
+                    <div class="numberFooter"><p>04</p><hr></div>
+                    <div class="endFooter_socialLinks">
+                        <h4>Social Links</h4>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://fr.yelp.be/bruxelles"><i class="fa-brands fa-yelp"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/en/"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                </div>
+        <!-- logo + copyright -->
+                <div class="endFooter_end">
+                    <img src="./resources/images/logo/footer-logo.png" alt="escapium logo">
+                    <p>Copyright &copy; 2020 Escapium | All Rights Reserved</p>
+                </div>
+            </div>
+    </footer>
+    <script src="./resources/js/index.js"></script>
 </body>
 </html>
