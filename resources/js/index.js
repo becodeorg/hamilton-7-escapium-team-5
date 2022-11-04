@@ -31,7 +31,7 @@ images[3] = 'resources/images/gallery/slide-4.jpg'
 
 
 carouselBtnOne.addEventListener('click', () => {
-    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(/resources/images/gallery/slide-1.jpg)';
+    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(resources/images/gallery/slide-1.jpg)';
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
@@ -40,7 +40,7 @@ carouselBtnOne.addEventListener('click', () => {
 });
 
 carouselBtnTwo.addEventListener('click', () => {
-    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(/resources/images/gallery/slide-2.jpg)';
+    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(resources/images/gallery/slide-2.jpg)';
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
@@ -49,7 +49,7 @@ carouselBtnTwo.addEventListener('click', () => {
 })
 
 carouselBtnThree.addEventListener('click', () => {
-    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(/resources/images/gallery/slide-3.jpg)';
+    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(resources/images/gallery/slide-3.jpg)';
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
@@ -58,7 +58,7 @@ carouselBtnThree.addEventListener('click', () => {
 })
 
 carouselBtnFour.addEventListener('click', () => {
-    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(/resources/images/gallery/slide-4.jpg)';
+    carousel.style.backgroundImage = 'linear-gradient(0deg, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0) 100%),url(resources/images/gallery/slide-4.jpg)';
     carousel.classList.add('switchCarousel')
     firstTitle.classList.add('transitionIn')
     secondTitle.classList.add('transitionInDelay')
