@@ -1573,6 +1573,11 @@ header {
 .titlePageRooms h1 {
   font-size: 32px;
   font-family: "Montserrat", sans-serif;
+  padding-top: 150px;
+}
+.titlePageRooms h1 span {
+  color: red;
+  font-size: 32px;
 }
 
 .buttonSectionRooms {
@@ -1581,7 +1586,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #222222;
+  background-color: #1B1B1B;
   padding-top: 20px;
 }
 .buttonSectionRooms button {
@@ -1589,7 +1594,7 @@ header {
   height: 35px;
   border-radius: 35px;
   color: #fefefe;
-  background-color: #222222;
+  background-color: #1B1B1B;
   border: 1px solid #fefefe;
   margin-bottom: 15px;
 }
@@ -1599,11 +1604,17 @@ header {
 }
 
 .roomsPage {
-  background-color: #222222;
+  background-color: #1B1B1B;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 375px));
   grid-gap: 0.2em;
   grid-auto-rows: 550px;
+  place-content: center;
+  padding-bottom: 40px;
+}
+
+.roomsPage h2:hover {
+  color: #F60B0E;
 }
 
 .backgroundRooms {
@@ -1662,11 +1673,27 @@ header {
   margin: 10px;
 }
 
+.rooms_magicImperium:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_theCure {
   background-image: url(../images/gallery/room-2.jpg);
   background-size: cover;
   background-position: center;
   margin: 10px;
+}
+
+.rooms_theCure:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
 }
 
 .rooms_burlesque {
@@ -1676,11 +1703,27 @@ header {
   margin: 10px;
 }
 
+.rooms_burlesque:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_theHospital {
   background-image: url(../images/gallery/room-5.jpg);
   background-size: cover;
   background-position: center;
   margin: 10px;
+}
+
+.rooms_theHospital:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
 }
 
 .rooms_abandonedFactory {
@@ -1690,11 +1733,27 @@ header {
   margin: 10px;
 }
 
+.rooms_abandonedFactory:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_bunker51 {
   background-image: url(../images/gallery/room-7.jpg);
   background-size: cover;
   background-position: center;
   margin: 10px;
+}
+
+.rooms_bunker51:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
 }
 
 .rooms_theMysticalRoom {
@@ -1704,11 +1763,35 @@ header {
   margin: 10px;
 }
 
+.rooms_theMysticalRoom:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
 .rooms_backToTheFutur {
   background-image: url(../images/gallery/room-9.jpg);
   background-size: cover;
   background-position: center;
   margin: 10px;
+}
+
+.rooms_backToTheFutur:hover {
+  -webkit-transform: scale(1.02); /* Safari et Chrome */
+  -moz-transform: scale(1.02); /* Firefox */
+  -ms-transform: scale(1.02); /* Internet Explorer 9 */
+  -o-transform: scale(1.02); /* Opera */
+  transform: scale(1.02);
+}
+
+.rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital {
+  display: none;
+}
+
+.selection {
+  display: none;
 }
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
@@ -1720,6 +1803,9 @@ header {
     justify-content: center;
   }
   .backgroundRooms h1 {
+    font-size: 44px;
+  }
+  .backgroundRooms h1 span {
     font-size: 44px;
   }
   .backgroundRooms p {
@@ -1761,20 +1847,35 @@ header {
   .infoRooms .svg-inline--fa {
     margin-top: 2px;
   }
+  .rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital {
+    display: none;
+  }
+  .selection {
+    display: none;
+  }
 }
 @media screen and (min-width: 1024px) {
+  .titlePageRooms p {
+    font-size: 25px !important;
+  }
+  .titlePageRooms strong {
+    font-size: 25px;
+  }
   .roomsPage {
     grid-template-columns: repeat(4, 250px);
     grid-gap: 0.2em;
     grid-auto-rows: 370px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     justify-content: center;
   }
   .roomsPage p {
     font-size: 16px;
   }
   .backgroundRooms h1 {
-    font-size: 120px;
+    font-size: 80px;
+  }
+  .backgroundRooms h1 span {
+    font-size: 80px;
   }
   .backgroundRooms p {
     font-size: 16px;
@@ -1794,14 +1895,156 @@ header {
     margin-bottom: 15px;
     margin-right: 15px;
   }
+  .rooms_addPrisonBreak {
+    display: grid;
+    background-image: url(../images/gallery/room-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addPrisonBreak:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .rooms_addMagicImperium {
+    display: grid;
+    background-image: url(../images/gallery/slide-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addMagicImperium:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .rooms_addBurlesque {
+    display: grid;
+    background-image: url(../images/gallery/room-3.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addBurlesque:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .rooms_addTheHospital {
+    display: grid;
+    background-image: url(../images/gallery/room-5.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addTheHospital:hover {
+    -webkit-transform: scale(1.02); /* Safari et Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* Internet Explorer 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+  }
+  .selection {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 20px 0px 80px 0px;
+  }
+  .selection__button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    background-color: #1B1B1B;
+    color: #fefefe;
+    text-align: center;
+  }
+  .selection__button:hover {
+    background-color: #F60B0E;
+    border: none;
+  }
+  .selection p {
+    letter-spacing: 5px;
+    transform: translateY(5px);
+    color: #fefefe;
+  }
 }
 @media screen and (min-width: 1920px) {
   .roomsPage {
     grid-template-columns: repeat(4, 300px);
     grid-gap: 0.2em;
     grid-auto-rows: 400px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     justify-content: center;
+  }
+  .rooms_addPrisonBreak {
+    display: grid;
+    background-image: url(../images/gallery/room-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addMagicImperium {
+    display: grid;
+    background-image: url(../images/gallery/slide-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_addBurlesque {
+    display: grid;
+    background-image: url(../images/gallery/room-3.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .rooms_adTtheHospital {
+    display: grid;
+    background-image: url(../images/gallery/room-5.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+  }
+  .selection {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 20px 0px 150px 0px;
+  }
+  .selection__button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    background-color: #1B1B1B;
+    color: #fefefe;
+    text-align: center;
+  }
+  .selection__button:hover {
+    background-color: #F60B0E;
+    border: none;
+  }
+  .selection p {
+    letter-spacing: 5px;
+    transform: translateY(5px);
+    color: #fefefe;
   }
 }
 * {
@@ -1907,6 +2150,10 @@ footer {
   margin-top: 15px;
 }
 
+.endFooter_socialLinks .svg-inline--fa:hover {
+  background-color: #F60B0E;
+}
+
 .endFooter_end {
   display: flex;
   flex-direction: column;
@@ -1942,6 +2189,32 @@ footer {
 @media screen and (min-width: 1024px) {
   .endFooter {
     justify-content: space-around;
+    margin: 30px 30px 0px 30px;
+  }
+  .endFooter a {
+    font-size: 14px;
+  }
+  .endFooter p {
+    font-size: 14px;
+  }
+  .endFooter_working_hours_day {
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .endFooter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 200px 0px 200px;
+  }
+  .endFooter a {
+    font-size: 18px;
+  }
+  .endFooter p {
+    font-size: 18px;
+  }
+  .endFooter_working_hours_day {
+    padding-right: 30px;
   }
 }
 h5 {
@@ -2083,7 +2356,6 @@ li {
 
 * {
   font-family: "Hind", sans-serif;
-  font-size: 14px;
 }
 
 h2 {
@@ -2103,10 +2375,10 @@ h2 {
 .theCure_generalInfo_head {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  padding: 30px 45px 15px 40px;
+  padding: 30px 45px 15px 20px;
 }
 .theCure_generalInfo_head p {
   color: #fefefe;
@@ -2135,12 +2407,14 @@ h2 {
   margin-left: 10px;
 }
 
+.theCure_generalInfo_players, .theCure_generalInfo_minutes {
+  border-left: 1px solid gray;
+  padding-left: 20px;
+}
+
 .theCure_generalInfo_text {
   color: gray;
   margin: 20px 20px 10px 20px;
-}
-.theCure_generalInfo_text p {
-  margin-left: 20px;
 }
 
 .theCure_generalInfo_phone {
@@ -2215,6 +2489,9 @@ h2 {
   font-weight: 700;
   color: #fefefe;
 }
+.theCure_otherRooms .theCure_otherRooms_selection h3:hover {
+  color: #F60B0E;
+}
 .theCure_otherRooms .rooms_theMysticalRoom {
   width: auto;
   height: 370px;
@@ -2247,8 +2524,41 @@ h2 {
   margin-left: 30px;
   font-size: 16px;
 }
+.theCure_otherRooms .selection_theCureRoom {
+  display: none;
+}
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 45px;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom .selection__button {
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding-top: 5px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    background-color: #1B1B1B;
+    color: #fefefe;
+    text-align: center;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom .selection__button:hover {
+    background-color: #F60B0E;
+    border: none;
+  }
   .theCure_otherRooms h2 {
     margin-left: 40px;
     padding-top: 100px;
@@ -2297,9 +2607,23 @@ h2 {
   }
 }
 @media screen and (min-width: 1024px) {
-  h1 {
-    font-size: 44px;
-    margin: 0px 0px 10px 25px;
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 90px;
+  }
+  .theCure_generalInfo_players, .theCure_generalInfo_minutes {
+    padding-left: 40px;
   }
   .theCure_otherRooms h2 {
     margin-left: 90px;
@@ -2340,6 +2664,14 @@ h2 {
     flex-direction: row;
     padding: 0px 70px;
   }
+  .theCure_generalInfo_text {
+    color: gray;
+    margin: 20px 20px 10px 50px;
+    font-size: 18px;
+  }
+  .theCure_generalInfo_head p {
+    font-size: 16px;
+  }
   .theCure_generalInfo_inside {
     display: flex;
     flex-direction: column;
@@ -2349,8 +2681,26 @@ h2 {
   }
 }
 @media screen and (min-width: 1920px) {
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 410px;
+  }
   .theCure_generalInfo {
     padding: 100px 450px;
+  }
+  .theCure_generalInfo_players, .theCure_generalInfo_minutes {
+    padding-left: 70px;
   }
   .theCure_otherRooms .theCure_otherRooms_selection {
     margin: 0px 400px;
@@ -2358,6 +2708,15 @@ h2 {
   }
   .theCure_otherRooms h2 {
     margin-left: 410px;
+  }
+  .theCure_generalInfo_text {
+    font-size: 22px;
+  }
+  .theCure_generalInfo_head p {
+    font-size: 16px;
+  }
+  .theCure_generalInfo_footer p {
+    font-size: 18px;
   }
 }
 
