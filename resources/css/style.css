@@ -1586,7 +1586,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #222222;
+  background-color: #1B1B1B;
   padding-top: 20px;
 }
 .buttonSectionRooms button {
@@ -1594,7 +1594,7 @@ header {
   height: 35px;
   border-radius: 35px;
   color: #fefefe;
-  background-color: #222222;
+  background-color: #1B1B1B;
   border: 1px solid #fefefe;
   margin-bottom: 15px;
 }
@@ -1604,7 +1604,7 @@ header {
 }
 
 .roomsPage {
-  background-color: #222222;
+  background-color: #1B1B1B;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 375px));
   grid-gap: 0.2em;
@@ -1722,7 +1722,7 @@ header {
   display: none;
 }
 
-.rooms_selection {
+.selection {
   display: none;
 }
 
@@ -1782,7 +1782,7 @@ header {
   .rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_adTtheHospital {
     display: none;
   }
-  .rooms_selection {
+  .selection {
     display: none;
   }
 }
@@ -1791,7 +1791,7 @@ header {
     grid-template-columns: repeat(4, 250px);
     grid-gap: 0.2em;
     grid-auto-rows: 370px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     justify-content: center;
   }
   .roomsPage p {
@@ -1849,15 +1849,16 @@ header {
     background-position: center;
     margin: 10px;
   }
-  .rooms_selection {
+  .selection {
+    background-color: #1B1B1B;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     gap: 15px;
-    padding: 20px 0;
+    padding: 20px 0px 80px 0px;
   }
-  .rooms_selection__button {
+  .selection__button {
     display: block;
     height: 40px;
     width: 40px;
@@ -1865,15 +1866,17 @@ header {
     border: 1px solid #717171;
     border-radius: 50%;
     background-color: #1B1B1B;
-    color: #717171;
+    color: #fefefe;
     text-align: center;
   }
-  .rooms_selection__button:hover {
+  .selection__button:hover {
     background-color: #F60B0E;
+    border: none;
   }
-  .rooms_selection p {
+  .selection p {
     letter-spacing: 5px;
     transform: translateY(5px);
+    color: #fefefe;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1881,7 +1884,7 @@ header {
     grid-template-columns: repeat(4, 300px);
     grid-gap: 0.2em;
     grid-auto-rows: 400px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     justify-content: center;
   }
   .rooms_addPrisonBreak {
@@ -1912,15 +1915,16 @@ header {
     background-position: center;
     margin: 10px;
   }
-  .rooms_selection {
+  .selection {
+    background-color: #1B1B1B;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     gap: 15px;
-    padding: 20px 0;
+    padding: 20px 0px 150px 0px;
   }
-  .rooms_selection__button {
+  .selection__button {
     display: block;
     height: 40px;
     width: 40px;
@@ -1928,15 +1932,17 @@ header {
     border: 1px solid #717171;
     border-radius: 50%;
     background-color: #1B1B1B;
-    color: #717171;
+    color: #fefefe;
     text-align: center;
   }
-  .rooms_selection__button:hover {
+  .selection__button:hover {
     background-color: #F60B0E;
+    border: none;
   }
-  .rooms_selection p {
+  .selection p {
     letter-spacing: 5px;
     transform: translateY(5px);
+    color: #fefefe;
   }
 }
 * {
@@ -2042,6 +2048,10 @@ footer {
   margin-top: 15px;
 }
 
+.svg-inline--fa:hover {
+  background-color: #F60B0E;
+}
+
 .endFooter_end {
   display: flex;
   flex-direction: column;
@@ -2135,10 +2145,7 @@ h2 {
 
 .theCure_generalInfo_text {
   color: gray;
-  margin: 20px 20px 10px 20px;
-}
-.theCure_generalInfo_text p {
-  margin-left: 20px;
+  margin: 20px 20px 10px 50px;
 }
 
 .theCure_generalInfo_phone {
@@ -2247,6 +2254,36 @@ h2 {
 }
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 45px;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom .selection__button {
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding-top: 5px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    background-color: #1B1B1B;
+    color: #fefefe;
+    text-align: center;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom .selection__button:hover {
+    background-color: #F60B0E;
+    border: none;
+  }
   .theCure_otherRooms h2 {
     margin-left: 40px;
     padding-top: 100px;
@@ -2299,6 +2336,21 @@ h2 {
     font-size: 44px;
     margin: 0px 0px 10px 25px;
   }
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 90px;
+  }
   .theCure_otherRooms h2 {
     margin-left: 90px;
     padding-top: 100px;
@@ -2338,6 +2390,14 @@ h2 {
     flex-direction: row;
     padding: 0px 70px;
   }
+  .theCure_generalInfo_text {
+    color: gray;
+    margin: 20px 20px 10px 50px;
+    font-size: 18px;
+  }
+  .theCure_generalInfo_head p {
+    font-size: 16px;
+  }
   .theCure_generalInfo_inside {
     display: flex;
     flex-direction: column;
@@ -2347,6 +2407,21 @@ h2 {
   }
 }
 @media screen and (min-width: 1920px) {
+  .theCure_otherRooms_titleButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .theCure_otherRooms_titleButton .selection_theCureRoom {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 100px 0px 0px 0px;
+    margin-right: 410px;
+  }
   .theCure_generalInfo {
     padding: 100px 450px;
   }
@@ -2356,6 +2431,15 @@ h2 {
   }
   .theCure_otherRooms h2 {
     margin-left: 410px;
+  }
+  .theCure_generalInfo_text {
+    font-size: 22px;
+  }
+  .theCure_generalInfo_head p {
+    font-size: 16px;
+  }
+  .theCure_generalInfo_footer p {
+    font-size: 18px;
   }
 }
 

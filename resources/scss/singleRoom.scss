@@ -48,10 +48,7 @@ h2{
 }
 .theCure_generalInfo_text{
     color: gray;
-    margin: 20px 20px 10px 20px;
-    p{
-        margin-left: 20px;
-    }
+    margin: 20px 20px 10px 50px;
 }
 .theCure_generalInfo_phone{
     display: flex;
@@ -164,10 +161,36 @@ h2{
 
 //screen tablet 768px
 @media screen and (min-width:760px) and (max-width:1023px){
-    // h1{
-    //     font-size: 44px;
-    //     margin: 0px 0px 10px 25px;
-    // }
+    .theCure_otherRooms_titleButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .selection_theCureRoom{
+            background-color: #1B1B1B;   
+            display: flex;     
+            justify-content: center;     
+            align-items: center;     
+            list-style: none;     
+            gap: 15px;    
+            padding: 100px 0px 0px 0px; 
+            margin-right: 45px;
+            .selection__button {         
+                display: block;         
+                height: 30px;         
+                width: 30px;         
+                padding-top: 5px;         
+                border: 1px solid #717171;         
+                border-radius: 50%;         
+                background-color:#1B1B1B;         
+                color: #fefefe;         
+                text-align: center;          
+                &:hover {             
+                    background-color: #F60B0E;
+                    border: none;         
+                }    
+            }     
+        }
+    }
     .theCure_otherRooms{
         h2{
         margin-left: 40px;
@@ -224,6 +247,21 @@ h2{
     font-size: 44px;
     margin: 0px 0px 10px 25px;
 }
+.theCure_otherRooms_titleButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .selection_theCureRoom{
+        background-color: #1B1B1B;   
+        display: flex;     
+        justify-content: center;     
+        align-items: center;     
+        list-style: none;     
+        gap: 15px;    
+        padding: 100px 0px 0px 0px; 
+        margin-right: 90px;
+    }
+}
 .theCure_otherRooms{
     h2{
     margin-left: 90px;
@@ -266,6 +304,14 @@ h2{
     flex-direction: row;
     padding: 0px 70px;
 }
+.theCure_generalInfo_text{
+    color: gray;
+    margin: 20px 20px 10px 50px;
+    font-size: 18px;
+}
+.theCure_generalInfo_head p {
+    font-size: 16px;
+}
 .theCure_generalInfo_inside{
     display: flex;
     flex-direction: column;
@@ -276,6 +322,21 @@ h2{
 }
 //screen laptop min 1920px
 @media screen and (min-width: 1920px) { 
+    .theCure_otherRooms_titleButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .selection_theCureRoom{
+            background-color: #1B1B1B;   
+            display: flex;     
+            justify-content: center;     
+            align-items: center;     
+            list-style: none;     
+            gap: 15px;    
+            padding: 100px 0px 0px 0px; 
+            margin-right: 410px;
+        }
+    }
     .theCure_generalInfo {
         padding:100px 450px;
     }
@@ -285,5 +346,14 @@ h2{
     }
     .theCure_otherRooms h2 {
         margin-left: 410px;
+    }
+    .theCure_generalInfo_text{
+        font-size: 22px;
+    }
+    .theCure_generalInfo_head p {
+        font-size: 16px;
+    }
+    .theCure_generalInfo_footer p{
+        font-size: 18px;
     }
 } 
