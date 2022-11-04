@@ -9,7 +9,57 @@
     <title>Rooms</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav class="nav">
+            <div class="nav__wrapper">
+                <ul class="nav__left">
+                    <li><img src="./resources/images/logo/logo.png" alt="" class="nav__logo"></li>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="">features</a></li>
+                    <li><a href="rooms.html">rooms</a></li>
+                    <li><a href="contact.html">booking</a></li>
+                    <li><a href="blogs.html">blog</a></li>
+                    <li><a href="contact.html">contacts</a></li>
+                </ul>
+                <ul class="nav__right">
+                    <li><a href="" class="nav__btn right">Book Now!</a></li>
+                    <li><img src="./resources/images/logo/search.svg" alt="" class="nav__icon search"></li>
+                    <li class="vertical__rule">|</li>
+                    <li><img src="./resources/images/logo/solo-people.svg" alt="" class="nav__icon"></li>
+                    <li><a href="#" class="nav__right__sign right">Sign In</a></li>
+                    <div class="hamburger" id="hamburger">
+                        <span>&#8213;</span>
+                        <span>&#8213;</span>
+                        <span>&#8213;</span>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="nav__mobile" id="nav__mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="about.html">About</a></li>
+                <hr>
+                <li><a href="">Features</a></li>
+                <hr>
+                <li><a href="rooms.html">Rooms</a></li>
+                <hr>
+                <li><a href="contact.html">Booking</a></li>
+                <hr>
+                <li><a href="blogs.html">Blog</a></li>
+                <hr>
+                <li><a href="contact.html">Contacts</a></li>
+                <hr>
+                <li>
+                    <img src="./resources/images/logo/solo-people.svg" alt="" class="nav__mobile__icon">
+                    <a href="#" class="nav__mobile__sign">Sign In</a>
+                </li>
+                <hr>
+            </ul>
+        </div>
+    </header>
     <main>
         <section class="titlePageRooms">
             <div class="backgroundRooms">
@@ -23,7 +73,7 @@
             <button>Hard</button>
             <button>Normal</button>
         </section>
-        <section class="rooms">
+        <section class="roomsPage">
 <!-- ROOM 1 -->
             <article class="rooms_magicImperium">
                 <div class="backgroundRooms">
@@ -242,7 +292,81 @@
             </article>
         </section>
     </main>
-    <footer></footer>
-    
+    <footer>
+        <div class="backgroundFooter">    <!-- all footer div -->
+            <div class="endFooter">       <!-- div -> 4div info -->
+    <!-- section 1 address -->
+                <div class="sectionFooter">
+                <div class="numberFooter"><p>01</p><hr></div>
+                <div class="endFooter_address">
+                    <h4>Our Address</h4>
+                    <p>Escape Room Ltd.<br>2390 RoadHill St. Suite 100<br>North Downtown, NY 82153</p><br>
+                    <p>Email:<div class="emailFooter">info@escapium.com</div></p>
+                    <p>Tel: +1 800 900 1248</p>
+                </div>
+            </div>
+    <!-- section 2 links -->
+            <div class="sectionFooter">
+                <div class="numberFooter"><p>02</p><hr></div>
+                <nav class="endFooter_usefulLinks">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Plan an Event</a></li>
+                        <li><a href="#">Pricing packages</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    <!-- section 3 opening hours -->
+            <div class="sectionFooter">
+                <div class="numberFooter"><p>03</p><hr></div>
+                <div class="endFooter_working">
+                    <h4>Working Hours</h4>
+                    <div class="endFooter_working_hours">
+                        <div class="endFooter_working_hours_day">
+                            <p>Monday:</p>
+                            <p>Tuesday:</p>
+                            <p id="wednesdayFooter">Wednesday:</p>
+                            <p>Thursday:</p>
+                            <p>Friday:</p>
+                            <p>Saturday:</p>
+                            <p>Sonday:</p>
+                        </div>
+                        <div class="endFooter_working_hours_time">
+                            <p>6pm - 11pm</p>
+                            <p>5pm - 11pm</p>
+                            <p>Closed</p>
+                            <p>6pm - 11pm</p>
+                            <p>2pm - 11pm</p>
+                            <p>11am - 11pm</p>
+                            <p>11am - 9pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- section 4 social links -->
+            <div class="sectionFooter">
+                <div class="numberFooter"><p>04</p><hr></div>
+                <div class="endFooter_socialLinks">
+                    <h4>Social Links</h4>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://fr.yelp.be/bruxelles"><i class="fa-brands fa-yelp"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/en/"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            </div>
+    <!-- logo + copyright -->
+            <div class="endFooter_end">
+                <img src="./resources/images/logo/footer-logo.png" alt="escapium logo">
+                <p>Copyright &copy; 2020 Escapium | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
