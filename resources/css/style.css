@@ -1353,6 +1353,14 @@ header {
     font-size: 32px;
   }
 }
+@keyframes fromLeft {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .nav {
   background-color: #222222;
 }
@@ -1384,6 +1392,7 @@ header {
   display: none;
   z-index: 5;
   background-color: #222222;
+  animation: fromLeft 0.4s;
 }
 .nav__mobile ul {
   list-style: none;
