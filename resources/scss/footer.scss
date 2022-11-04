@@ -93,7 +93,7 @@ footer{
         margin-top: 15px;
     }
 }
-.svg-inline--fa:hover{
+.endFooter_socialLinks .svg-inline--fa:hover{
     background-color: #F60B0E;
 }
 .endFooter_end{
@@ -143,5 +143,32 @@ footer{
 @media screen and (min-width: 1024px) {
     .endFooter{
         justify-content: space-around;
+        margin: 30px 30px 0px 30px;
+        a{
+            font-size: 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    .endFooter_working_hours_day{
+        padding-right: 15px;
+    }
+}
+//screen laptop min 1920px
+@media screen and (min-width: 1920px){
+    .endFooter {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 200px 0px 200px;
+        a{
+            font-size: 18px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    .endFooter_working_hours_day{
+        padding-right: 30px;
     }
 }

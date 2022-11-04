@@ -58,6 +58,9 @@
     place-content: center;
     padding-bottom: 40px;
 }
+.roomsPage h2:hover{
+    color: #F60B0E;
+}
 .backgroundRooms{
     backdrop-filter: brightness(0.4);
     width: auto;
@@ -111,11 +114,25 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_magicImperium:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_theCure{
     background-image: url(../images/gallery/room-2.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
+}
+.rooms_theCure:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
 }
 .rooms_burlesque{
     background-image: url(../images/gallery/room-3.jpg);
@@ -123,11 +140,25 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_burlesque:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_theHospital{
     background-image: url(../images/gallery/room-5.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
+}
+.rooms_theHospital:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
 }
 .rooms_abandonedFactory{
     background-image: url(../images/gallery/gallery-1.jpg);
@@ -135,11 +166,25 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_abandonedFactory:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_bunker51{
     background-image: url(../images/gallery/room-7.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
+}
+.rooms_bunker51:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
 }
 .rooms_theMysticalRoom{
     background-image: url(../images/gallery/room-8.jpg);
@@ -147,13 +192,27 @@
     background-position: center;
     margin: 10px;
 }
+.rooms_theMysticalRoom:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
 .rooms_backToTheFutur{
     background-image: url(../images/gallery/room-9.jpg);
     background-size: cover;
     background-position: center;
     margin: 10px;
 }
-.rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_adTtheHospital{
+.rooms_backToTheFutur:hover{
+    -webkit-transform:scale(1.02); /* Safari et Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* Internet Explorer 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+}
+.rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital{
     display: none;
 }
 .selection{
@@ -219,7 +278,7 @@
     .infoRooms .svg-inline--fa {
         margin-top: 2px;
     }
-    .rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_adTtheHospital{
+    .rooms_addPrisonBreak, .rooms_addMagicImperium, .rooms_addBurlesque, .rooms_addTheHospital{
         display: none;
     }
     .selection{
@@ -228,6 +287,14 @@
 }
 //screen laptop min 1024px
 @media screen and (min-width: 1024px) {
+    .titlePageRooms{
+        p{
+            font-size: 25px !important;
+        }
+        strong{
+            font-size: 25px;
+        }
+    }
     .roomsPage{
         p{
         font-size: 16px ;
@@ -240,9 +307,9 @@
         }
     .backgroundRooms {
         h1{
-            font-size: 120px;
+            font-size: 80px;
             span{
-                font-size: 120px;
+                font-size: 80px;
             }
         }
         p{
@@ -271,12 +338,26 @@
         background-position: center;
         margin: 10px;
     }
+    .rooms_addPrisonBreak:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
+    }
     .rooms_addMagicImperium{
         display: grid;
         background-image: url(../images/gallery/slide-2.jpg);
         background-size: cover;
         background-position: center;
         margin: 10px;
+    }
+    .rooms_addMagicImperium:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
     }
     .rooms_addBurlesque{
         display: grid;
@@ -285,12 +366,26 @@
         background-position: center;
         margin: 10px;
     }
-    .rooms_adTtheHospital{
+    .rooms_addBurlesque:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
+    }
+    .rooms_addTheHospital{
         display: grid;
         background-image: url(../images/gallery/room-5.jpg);
         background-size: cover;
         background-position: center;
         margin: 10px;
+    }
+    .rooms_addTheHospital:hover{
+        -webkit-transform:scale(1.02); /* Safari et Chrome */
+        -moz-transform:scale(1.02); /* Firefox */
+        -ms-transform:scale(1.02); /* Internet Explorer 9 */
+        -o-transform:scale(1.02); /* Opera */
+        transform:scale(1.02);
     }
     .selection {
         background-color: #1B1B1B;     

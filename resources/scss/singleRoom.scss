@@ -1,7 +1,6 @@
 @use '../scss/base/typographie' as t;
 *{
     font-family: t.$font_paragraphs;
-    font-size: 14px;
 }
 h2{
     font-family: t.$font__heading;
@@ -17,10 +16,10 @@ h2{
 .theCure_generalInfo_head{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    padding: 30px 45px 15px 40px;
+    padding: 30px 45px 15px 20px;
     p{
         color: #fefefe;
         text-transform: uppercase;
@@ -46,9 +45,13 @@ h2{
         margin-left: 10px;
     }
 }
+.theCure_generalInfo_players, .theCure_generalInfo_minutes{
+    border-left: 1px solid gray;
+    padding-left: 20px;
+}
 .theCure_generalInfo_text{
     color: gray;
-    margin: 20px 20px 10px 50px;
+    margin: 20px 20px 10px 20px;
 }
 .theCure_generalInfo_phone{
     display: flex;
@@ -124,6 +127,9 @@ h2{
         font-weight: 700;
         color: #fefefe;
     }
+    .theCure_otherRooms_selection h3:hover{
+        color: #F60B0E;
+    }
     .rooms_theMysticalRoom{
         width: auto;
         height: 370px;
@@ -156,7 +162,9 @@ h2{
             font-size: 16px;
         }
     }
-    
+    .selection_theCureRoom{
+        display: none;
+    }
 }
 
 //screen tablet 768px
@@ -191,6 +199,9 @@ h2{
             }     
         }
     }
+    // .theCure_generalInfo_players, .theCure_generalInfo_minutes{
+    //     padding-left: 40px;
+    // }
     .theCure_otherRooms{
         h2{
         margin-left: 40px;
@@ -243,10 +254,6 @@ h2{
 
 //screen laptop min 1024px
 @media screen and (min-width: 1024px) {  
-    h1{
-    font-size: 44px;
-    margin: 0px 0px 10px 25px;
-}
 .theCure_otherRooms_titleButton{
     display: flex;
     flex-direction: row;
@@ -261,6 +268,9 @@ h2{
         padding: 100px 0px 0px 0px; 
         margin-right: 90px;
     }
+}
+.theCure_generalInfo_players, .theCure_generalInfo_minutes{
+    padding-left: 40px;
 }
 .theCure_otherRooms{
     h2{
@@ -339,6 +349,9 @@ h2{
     }
     .theCure_generalInfo {
         padding:100px 450px;
+    }
+    .theCure_generalInfo_players, .theCure_generalInfo_minutes{
+        padding-left: 70px;
     }
     .theCure_otherRooms .theCure_otherRooms_selection{
         margin: 0px 400px;
