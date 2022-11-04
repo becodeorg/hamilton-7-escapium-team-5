@@ -24,10 +24,10 @@ startCarousel = () => {
     }
 }
 
-images[0] = '/resources/images/gallery/slide-1.jpg'
-images[1] = '/resources/images/gallery/slide-2.jpg'
-images[2] = '/resources/images/gallery/slide-3.jpg'
-images[3] = '/resources/images/gallery/slide-4.jpg'
+images[0] = 'resources/images/gallery/slide-1.jpg'
+images[1] = 'resources/images/gallery/slide-2.jpg'
+images[2] = 'resources/images/gallery/slide-3.jpg'
+images[3] = 'resources/images/gallery/slide-4.jpg'
 
 
 carouselBtnOne.addEventListener('click', () => {
