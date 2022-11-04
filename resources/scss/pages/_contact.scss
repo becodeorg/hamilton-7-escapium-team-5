@@ -91,12 +91,23 @@
     .form__new {
         width: 100%;
     }
+
+    .form input:not([type=button]) {
+    width: 90%;
+    }
+    .form__message__full {
+        width: 95% !important;
+    }
 }
+
 
 @media (max-width:750px) {
     .header__top {
         h1 {
             font-size: 32px;
+            span {
+                font-size: 32px;
+            }
         }
     }
 }
