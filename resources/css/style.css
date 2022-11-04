@@ -1172,7 +1172,7 @@ header {
   background-color: #222222;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 375px));
-  grid-gap: 1em;
+  grid-gap: 0.2em;
   grid-auto-rows: 550px;
 }
 
@@ -1523,6 +1523,10 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
+}
+
+.theCure_titlePage {
+  background-color: #1B1B1B;
 }
 
 .theCure_generalInfo {

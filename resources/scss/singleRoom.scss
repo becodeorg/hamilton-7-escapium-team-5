@@ -3,30 +3,14 @@
     font-family: t.$font_paragraphs;
     font-size: 14px;
 }
-// h1{
-//     font-family: t.$font__heading;
-//     color: #fefefe;
-//     font-size: 28px;
-//     margin: 0px 0px 8px 20px;
-// }
 h2{
     font-family: t.$font__heading;
     font-size: 20px;
     font-weight: 700;
 }
-// .theCure_titlePage{
-//     height: 200px;
-//     background-image: url(../images/gallery/slide-3.jpg);
-//     background-size: cover;
-//     background-position: center;
-// }
-// .backgroundTheCure{
-//     backdrop-filter: brightness(0.4);
-//     width: auto;
-//     height: 100%;
-//     display: flex;
-//     align-items: flex-end;
-// }
+.theCure_titlePage{
+    background-color: #1B1B1B;
+}
 .theCure_generalInfo{
     background-color: #1B1B1B;
 }
