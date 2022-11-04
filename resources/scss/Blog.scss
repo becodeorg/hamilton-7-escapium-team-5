@@ -5,6 +5,35 @@ h5 {
 //#292929 box
 //#1d1d1d fond
 .blog {
+    &__descriptionNew {
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 12px;
+        color: #717171;
+        position: relative;
+        
+            &::before {
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 3px;
+                background-color: #717171;
+                top: 150%;
+                left: auto;
+            }
+        }
+    
+    &__btn {
+        padding:10px 30px;
+        border-radius: 25px;
+        background-color: #292929;
+        color: white;
+        font-weight: 600;
+        border: 1px solid #717171 ;
+        margin: 50px;
+        margin-left: 15px;
+        
+    }
     &__card {
         &--box {
             background-color:#292929 ;
@@ -12,3 +41,117 @@ h5 {
         }
     }
 }
+
+.grid {
+    &__Instagram {
+        display: grid;
+  grid-template-columns: repeat(3,1fr) ;
+  grid-template-rows: 20% 20%;
+  align-content: center;
+  gap: 10px;
+  padding: 10%;
+    }
+}
+
+.img {
+    &__Instagram {
+        width: 100%;
+
+    }
+}
+
+.Archives {
+    text-align: left;
+    margin: 20px;
+}
+
+li {
+    list-style-type:none;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+   
+    &__btn {
+        padding:5px 15px;
+        border-radius: 25px;
+        background-color: #1d1d1d;
+        color: white;
+        font-weight: 600;
+        border: 3px solid #717171 ;
+        margin: 5px;
+    }
+}
+
+.selection {     
+    display: flex;     
+    justify-content: center;     
+    align-items: center;     
+    list-style: none;     
+    gap: 15px;     
+    padding: 20px 0;      
+        &__button {         
+            display: block;         
+            height: 40px;         
+            width: 40px;         
+            padding: 10px;         
+            border: 1px solid #717171;         
+            border-radius: 50%;         
+            background-color:#1B1B1B;         
+            color: #717171;         
+            text-align: center;          
+
+                &:hover {             
+                    background-color: #F60B0E;         
+                }     
+            }   
+                a {
+                    color: white;
+                }
+                p {         
+                    letter-spacing: 5px;         
+                    transform: translateY(5px);     
+                } 
+            }
+
+        @media (max-width: 769px)
+        {
+            .selection {
+                &__button--ten 
+                {
+                    display: none;
+                }
+                p {
+                    display: none;
+                }
+            }
+                
+
+        }
+.Section {
+    text-align: left;
+    &__Title {
+            font-size: 44px;
+            padding-top: 200px;
+            padding-bottom: 25px;
+            position: relative;
+            padding-top: 15px;
+            padding-left: 15px;
+            font-size: 12px;
+            color: white;
+            position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 4px;
+            background-color: #717171;
+            top:94%;
+            left: 3%;
+        }
+    }
+    &__puce {
+        color: #292929;
+    }
+    }
