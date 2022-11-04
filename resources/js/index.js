@@ -1,27 +1,3 @@
-// adding google maps api
-
-function myMap() {
-    // map options
-    const options = {
-        zoom:15,
-        center:{lat:40.799353,lng:-73.953213},
-        mapId: '257331c2d7d50e2b'
-    }
-
-    // new map
-    const map = new google.maps.Map(document.getElementById('map'), options);
-
-    // load the image
-    const image = "resources/images/logo/gmap-logo.png"
-
-    // add marker
-    new google.maps.Marker({
-        position: {lat:40.799353,lng:-73.953213},
-        map:map,
-        icon: image     // add img as icon to map:map
-    });
-}
-
 // making the header carousel
 // declaring const
 const carousel = document.getElementById('carousel');
@@ -100,18 +76,4 @@ firstTitle.addEventListener('animationend', () => {
 
 secondTitle.addEventListener('animationend', () => {
     secondTitle.classList.remove('transitionInDelay')
-})
-
-
-// mobile nav
-
-const navLink = document.getElementById("nav__mobile");
-const toggleBtn = document.getElementById("hamburger")
-
-toggleBtn.addEventListener('click', () => {
-    if (navLink.style.display === "block") {
-        navLink.style.display = "none";
-      } else {
-        navLink.style.display = "block";
-      }
 })
